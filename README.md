@@ -68,6 +68,15 @@ Circular:    https://cdn.jsdelivr.net/gh/hatscripts/circle-flags@2.8.0/flags/{cc
 
 `{cc}` = ISO 3166-1 alpha-2, lowercase. Consuming services follow richlabel's `flags.ts` helper conventions.
 
+## Releases (GHA only — no local publish)
+
+Pushes/tags are handled by GitHub Actions. Do not run `npm publish` locally.
+
+- PR / push to main → `ci` workflow runs `npm run check` (manifest consistency)
+- push a `v*` tag → `publish` workflow runs `npm publish --provenance`
+  (requires secret `NPM_TOKEN` = npm automation token, human-gated)
+- To republish the current main without a tag, manually dispatch `publish` from the Actions tab
+
 ## License
 
 Package code/manifest is MIT. Copyright and trademark rights of individual assets follow the

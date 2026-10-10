@@ -1,11 +1,10 @@
 {
   "name": "sports-assets",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Static sports asset pack (sport icons, team/league logos) packaged for jsDelivr CDN",
   "license": "MIT",
   "type": "module",
   "files": [
-    "sport-icons",
     "team-logos",
     "league-logos",
     "manifest.json"

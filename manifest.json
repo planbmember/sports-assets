@@ -1,6 +1,546 @@
 {
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "licenseNote": "naver pstatic emblems and TheSportsDB badges are club-owned trademarks; hotlink/mirror for internal pilot only, redistribution rights unclear.",
   "sportIcons": {},
-  "teamLogos": {},
+  "teamLogos": {
+    "baseball/kbo/doosan-bears": {
+      "file": "team-logos/baseball/kbo/doosan-bears.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        59,
+        660
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/doosan-bears.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/hanwha-eagles": {
+      "file": "team-logos/baseball/kbo/hanwha-eagles.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        42,
+        658
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/hanwha-eagles.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/kia-tigers": {
+      "file": "team-logos/baseball/kbo/kia-tigers.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        43,
+        657
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/kia-tigers.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/kiwoom-heroes": {
+      "file": "team-logos/baseball/kbo/kiwoom-heroes.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        46
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/kiwoom-heroes.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/kt-wiz": {
+      "file": "team-logos/baseball/kbo/kt-wiz.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        45,
+        659
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/kt-wiz.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/lg-twins": {
+      "file": "team-logos/baseball/kbo/lg-twins.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        44,
+        653
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/lg-twins.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/lotte-giants": {
+      "file": "team-logos/baseball/kbo/lotte-giants.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        58,
+        652
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/lotte-giants.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/nc-dinos": {
+      "file": "team-logos/baseball/kbo/nc-dinos.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        41,
+        656
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/nc-dinos.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/samsung-lions": {
+      "file": "team-logos/baseball/kbo/samsung-lions.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        63,
+        655
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/samsung-lions.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "baseball/kbo/ssg-landers": {
+      "file": "team-logos/baseball/kbo/ssg-landers.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        64,
+        654
+      ],
+      "alternate": {
+        "file": "team-logos/baseball/kbo/ssg-landers.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/bucheon-fc-1995": {
+      "file": "team-logos/soccer/k-league-1/bucheon-fc-1995.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        78,
+        587
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/bucheon-fc-1995.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/daejeon-hana-citizen": {
+      "file": "team-logos/soccer/k-league-1/daejeon-hana-citizen.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        73,
+        576
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/daejeon-hana-citizen.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/fc-anyang": {
+      "file": "team-logos/soccer/k-league-1/fc-anyang.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        118,
+        628
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/fc-anyang.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/fc-seoul": {
+      "file": "team-logos/soccer/k-league-1/fc-seoul.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        107,
+        616
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/fc-seoul.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/gangwon-fc": {
+      "file": "team-logos/soccer/k-league-1/gangwon-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        61,
+        586
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/gangwon-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/gimcheon-sangmu": {
+      "file": "team-logos/soccer/k-league-1/gimcheon-sangmu.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        117,
+        627
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/gimcheon-sangmu.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/gwangju-fc": {
+      "file": "team-logos/soccer/k-league-1/gwangju-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        219,
+        532
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/gwangju-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/incheon-united": {
+      "file": "team-logos/soccer/k-league-1/incheon-united.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        62,
+        588
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/incheon-united.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/jeju-sk": {
+      "file": "team-logos/soccer/k-league-1/jeju-sk.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        108,
+        617
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/jeju-sk.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/jeonbuk-hyundai-motors": {
+      "file": "team-logos/soccer/k-league-1/jeonbuk-hyundai-motors.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        74,
+        577
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/jeonbuk-hyundai-motors.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/pohang-steelers": {
+      "file": "team-logos/soccer/k-league-1/pohang-steelers.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        77,
+        589
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/pohang-steelers.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-1/ulsan-hd": {
+      "file": "team-logos/soccer/k-league-1/ulsan-hd.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        220,
+        533
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-1/ulsan-hd.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/ansan-greeners": {
+      "file": "team-logos/soccer/k-league-2/ansan-greeners.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        218,
+        535
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/ansan-greeners.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/busan-ipark": {
+      "file": "team-logos/soccer/k-league-2/busan-ipark.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        110,
+        621
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/busan-ipark.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/cheonan-city": {
+      "file": "team-logos/soccer/k-league-2/cheonan-city.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        119,
+        629
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/cheonan-city.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/chungbuk-cheongju": {
+      "file": "team-logos/soccer/k-league-2/chungbuk-cheongju.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        81,
+        590
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/chungbuk-cheongju.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/chungnam-asan": {
+      "file": "team-logos/soccer/k-league-2/chungnam-asan.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        122,
+        632
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/chungnam-asan.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/daegu-fc": {
+      "file": "team-logos/soccer/k-league-2/daegu-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        412
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/daegu-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/gimhae-fc": {
+      "file": "team-logos/soccer/k-league-2/gimhae-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        121,
+        631
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/gimhae-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/gimpo-fc": {
+      "file": "team-logos/soccer/k-league-2/gimpo-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        79,
+        592
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/gimpo-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/gyeongnam-fc": {
+      "file": "team-logos/soccer/k-league-2/gyeongnam-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        120,
+        630
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/gyeongnam-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/hwaseong-fc": {
+      "file": "team-logos/soccer/k-league-2/hwaseong-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        76,
+        578
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/hwaseong-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/jeonnam-dragons": {
+      "file": "team-logos/soccer/k-league-2/jeonnam-dragons.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        105,
+        618
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/jeonnam-dragons.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/paju-frontier": {
+      "file": "team-logos/soccer/k-league-2/paju-frontier.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        109,
+        620
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/paju-frontier.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/seongnam-fc": {
+      "file": "team-logos/soccer/k-league-2/seongnam-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        82,
+        591
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/seongnam-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/seoul-e-land": {
+      "file": "team-logos/soccer/k-league-2/seoul-e-land.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        80,
+        593
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/seoul-e-land.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/suwon-fc": {
+      "file": "team-logos/soccer/k-league-2/suwon-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        75,
+        217
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/suwon-fc.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/suwon-samsung-bluewings": {
+      "file": "team-logos/soccer/k-league-2/suwon-samsung-bluewings.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        217,
+        534
+      ],
+      "alternate": {
+        "file": "team-logos/soccer/k-league-2/suwon-samsung-bluewings.sportsdb.png",
+        "source": "thesportsdb",
+        "license": "reference-only"
+      }
+    },
+    "soccer/k-league-2/yongin-fc": {
+      "file": "team-logos/soccer/k-league-2/yongin-fc.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        106
+      ]
+    }
+  },
   "leagueLogos": {}
 }

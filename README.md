@@ -16,21 +16,46 @@ Pinning a version gives immutable, long-lived caching. `@latest`/`@main` are for
 
 ## Layout
 
-- `sport-icons/` — sport icons (SVG)
-- `team-logos/` — club logos
-- `league-logos/` — league logos
+- `team-logos/<sport>/<league-slug>/<club-slug>.png` — club logos. When a naver emblem
+  exists it is the primary (no suffix); the TheSportsDB badge is kept as an alternate
+  with a `.<source>.png` suffix. Images are kept as-is (PNG, max 200px) — they are
+  already small, so recompressing/resizing would only lose quality.
+- `league-logos/` — league logos (none yet)
 - `manifest.json` — entity code → file path + `source`/`license` (required)
+
+## Sport icons are not here
+
+Sport icons are not repackaged; reference `@material-symbols/svg-400` (Apache-2.0)
+directly via jsDelivr:
+
+```text
+https://cdn.jsdelivr.net/npm/@material-symbols/svg-400@0.48.0/outlined/{icon}.svg
+```
+
+`{icon}` = Material Symbols icon name (e.g. `sports_soccer`, `sports_baseball`).
+The sport code → icon name mapping is owned by the consuming service (richlabel `src/lib/assets.ts`).
 
 ## manifest.json schema
 
 ```json
 {
   "version": "0.1.0",
-  "sportIcons": { "soccer": { "file": "sport-icons/soccer.svg", "source": "…", "license": "…" } },
-  "teamLogos": { "…": { "file": "team-logos/….webp", "source": "thesportsdb|naver", "license": "…" } },
-  "leagueLogos": { "…": { "file": "league-logos/….png", "source": "thesportsdb", "license": "…" } }
+  "sportIcons": {},
+  "teamLogos": {
+    "baseball/kbo/kia-tigers": {
+      "file": "team-logos/baseball/kbo/kia-tigers.png",
+      "source": "naver",
+      "license": "reference-only",
+      "richlabelTeamIds": [43, 657],
+      "alternate": { "file": "team-logos/baseball/kbo/kia-tigers.sportsdb.png", "source": "thesportsdb", "license": "reference-only" }
+    }
+  },
+  "leagueLogos": {}
 }
 ```
+
+After `scripts/build-team-logos.mjs` (richlabel pilot → import/regenerate manifest),
+run `npm run check` (`scripts/check-manifest.mjs`) to verify files ↔ manifest consistency.
 
 ## Flags are not here
 

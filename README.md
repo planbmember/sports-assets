@@ -73,8 +73,7 @@ Circular:    https://cdn.jsdelivr.net/gh/hatscripts/circle-flags@2.8.0/flags/{cc
 Pushes/tags are handled by GitHub Actions. Do not run `npm publish` locally.
 
 - PR / push to main → `ci` workflow runs `npm run check` (manifest consistency)
-- push a `v*` tag → `publish` workflow runs `npm publish --provenance`
-  (requires secret `NPM_TOKEN` = npm automation token, human-gated)
+- push a `v*` tag → `publish` workflow runs `npm publish` via npm trusted publishing (OIDC)
 - To republish the current main without a tag, manually dispatch `publish` from the Actions tab
 
 ## License

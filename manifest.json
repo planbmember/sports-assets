@@ -1,7 +1,158 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "licenseNote": "naver pstatic emblems and TheSportsDB badges are club-owned trademarks; hotlink/mirror for internal pilot only, redistribution rights unclear.",
-  "sportIcons": {},
+  "sportIcons": {
+    "aussie-rules": {
+      "file": "sport-icons/aussie-rules.svg",
+      "label": "Aussie Rules",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "baseball": {
+      "file": "sport-icons/baseball.svg",
+      "label": "Baseball",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "basketball": {
+      "file": "sport-icons/basketball.svg",
+      "label": "Basketball",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "cfb": {
+      "file": "sport-icons/cfb.webp",
+      "label": "College Football",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "chess": {
+      "file": "sport-icons/chess.svg",
+      "label": "Chess",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "cricket": {
+      "file": "sport-icons/cricket.svg",
+      "label": "Cricket",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "cycling": {
+      "file": "sport-icons/cycling.svg",
+      "label": "Cycling",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "darts": {
+      "file": "sport-icons/darts.svg",
+      "label": "Darts",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "esports": {
+      "file": "sport-icons/esports.svg",
+      "label": "Esports",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "football": {
+      "file": "sport-icons/football.svg",
+      "label": "Football",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "golf": {
+      "file": "sport-icons/golf.svg",
+      "label": "Golf",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "handball": {
+      "file": "sport-icons/handball.svg",
+      "label": "Handball",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "hockey": {
+      "file": "sport-icons/hockey.svg",
+      "label": "Hockey",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "mlb": {
+      "file": "sport-icons/mlb.webp",
+      "label": "MLB",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "mma": {
+      "file": "sport-icons/mma.svg",
+      "label": "Combat",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "motorsports": {
+      "file": "sport-icons/motorsports.svg",
+      "label": "Motorsports",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "nfl": {
+      "file": "sport-icons/nfl.webp",
+      "label": "NFL",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "pickleball": {
+      "file": "sport-icons/pickleball.svg",
+      "label": "Pickleball",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "rugby": {
+      "file": "sport-icons/rugby.svg",
+      "label": "Rugby",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "soccer": {
+      "file": "sport-icons/soccer.svg",
+      "label": "Soccer",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "table-tennis": {
+      "file": "sport-icons/table-tennis.svg",
+      "label": "Table Tennis",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "tennis": {
+      "file": "sport-icons/tennis.svg",
+      "label": "Tennis",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "ucl": {
+      "file": "sport-icons/ucl.webp",
+      "label": "UEFA Champions League",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "ufc": {
+      "file": "sport-icons/ufc.webp",
+      "label": "UFC",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "unl": {
+      "file": "sport-icons/unl.svg",
+      "label": "UNL",
+      "source": "polymarket",
+      "license": "reference-only"
+    }
+  },
   "teamLogos": {
     "baseball/kbo/doosan-bears": {
       "file": "team-logos/baseball/kbo/doosan-bears.webp",

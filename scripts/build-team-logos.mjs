@@ -1,5 +1,7 @@
 // Imports the richlabel team logo pilot (assets/team-logos/pilot) into this package's
-// team-logos/ and regenerates manifest.json.
+// team-logos/ and regenerates manifest.json. All raster assets are stored as lossless
+// WebP (org rule: image assets in this package are WebP; SVG stays SVG) — pilot PNGs
+// are converted on import via sharp (npm prebuilt binaries; no system ImageMagick).
 //
 //   node scripts/build-team-logos.mjs <pilot-dir>
 //
@@ -7,9 +9,10 @@
 // Club slugs are derived from the TheSportsDB English team name; naver-only rows are
 // attached to their canonical club via NAVER_SLUG_MAP below. Rows sharing a slug are
 // merged into one club (naver as the primary file, sportsdb as the alternate).
-import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const pilotDir = process.argv[2];
@@ -109,16 +112,16 @@ let fileCount = 0;
 for (const [key, club] of [...clubs.entries()].sort()) {
   const primary = club.variants.has("naver") ? "naver" : "sportsdb";
   const entry = {
-    file: `team-logos/${key}.png`,
+    file: `team-logos/${key}.webp`,
     source: primary === "naver" ? "naver" : "thesportsdb",
     license: "reference-only",
     richlabelTeamIds: club.teamIds.sort((a, b) => a - b),
   };
   for (const [source, v] of club.variants) {
-    const rel = source === primary ? entry.file : `team-logos/${key}.${source}.png`;
+    const rel = source === primary ? entry.file : `team-logos/${key}.${source}.webp`;
     const dest = join(root, rel);
     mkdirSync(dirname(dest), { recursive: true });
-    copyFileSync(v.src, dest);
+    await sharp(v.src).webp({ lossless: true }).toFile(dest);
     fileCount += 1;
     if (source !== primary) {
       entry.alternate = { file: rel, source: "thesportsdb", license: "reference-only" };

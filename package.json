@@ -1,6 +1,6 @@
 {
   "name": "sports-assets",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Static sports asset pack (sport icons, team/league logos) packaged for jsDelivr CDN",
   "license": "MIT",
   "repository": {
@@ -17,6 +17,10 @@
     "access": "public"
   },
   "scripts": {
-    "check": "node scripts/check-manifest.mjs"
+    "check": "node scripts/check-manifest.mjs",
+    "build:team-logos": "node scripts/build-team-logos.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }

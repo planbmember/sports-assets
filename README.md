@@ -16,10 +16,13 @@ Pinning a version gives immutable, long-lived caching. `@latest`/`@main` are for
 
 ## Layout
 
-- `team-logos/<sport>/<league-slug>/<club-slug>.png` — club logos. When a naver emblem
+- `team-logos/<sport>/<league-slug>/<club-slug>.webp` — club logos. When a naver emblem
   exists it is the primary (no suffix); the TheSportsDB badge is kept as an alternate
-  with a `.<source>.png` suffix. Images are kept as-is (PNG, max 200px) — they are
-  already small, so recompressing/resizing would only lose quality.
+  with a `.<source>.webp` suffix. All raster images are **lossless WebP** (org rule:
+  raster assets in this package are WebP; SVG stays SVG). Conversion happens at import
+  time in `scripts/build-team-logos.mjs` (sharp, `webp({ lossless: true })`) — visible
+  pixels are identical to the PNG sources, at ~35% smaller size. (libwebp normalizes
+  the RGB values of fully transparent pixels; nothing visible changes.)
 - `league-logos/` — league logos (none yet)
 - `manifest.json` — entity code → file path + `source`/`license` (required)
 
@@ -39,15 +42,15 @@ The sport code → icon name mapping is owned by the consuming service (richlabe
 
 ```json
 {
-  "version": "0.1.1",
+  "version": "0.2.0",
   "sportIcons": {},
   "teamLogos": {
     "baseball/kbo/kia-tigers": {
-      "file": "team-logos/baseball/kbo/kia-tigers.png",
+      "file": "team-logos/baseball/kbo/kia-tigers.webp",
       "source": "naver",
       "license": "reference-only",
       "richlabelTeamIds": [43, 657],
-      "alternate": { "file": "team-logos/baseball/kbo/kia-tigers.sportsdb.png", "source": "thesportsdb", "license": "reference-only" }
+      "alternate": { "file": "team-logos/baseball/kbo/kia-tigers.sportsdb.webp", "source": "thesportsdb", "license": "reference-only" }
     }
   },
   "leagueLogos": {}
@@ -67,6 +70,21 @@ Circular:    https://cdn.jsdelivr.net/gh/hatscripts/circle-flags@2.8.0/flags/{cc
 ```
 
 `{cc}` = ISO 3166-1 alpha-2, lowercase. Consuming services follow richlabel's `flags.ts` helper conventions.
+
+## Importing new logos (GHA — no local ImageMagick)
+
+Conversion runs in GitHub Actions, not on a local machine:
+
+1. Copy the richlabel pilot directory (`assets/team-logos/pilot`, containing
+   `manifest.json`) into this repo (default path: `pilot/`), commit, push to main.
+2. Actions tab → `import` workflow → Run workflow (set `pilot-dir` if you used a
+   different path). It runs `scripts/build-team-logos.mjs` + `npm run check`, deletes
+   the pilot directory again, and commits the converted WebP files + regenerated
+   `manifest.json` back to main with `[skip ci]`.
+3. Verify the import commit, then release as below.
+
+Local fallback: `npm ci && npm run build:team-logos -- <pilot-dir>` needs only Node —
+sharp ships prebuilt binaries, no system ImageMagick.
 
 ## Releases (GHA only — no local publish)
 

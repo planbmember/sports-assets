@@ -39,7 +39,7 @@ The sport code → icon name mapping is owned by the consuming service (richlabe
 
 ```json
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "sportIcons": {},
   "teamLogos": {
     "baseball/kbo/kia-tigers": {

@@ -24,12 +24,20 @@ Pinning a version gives immutable, long-lived caching. `@latest`/`@main` are for
   pixels are identical to the PNG sources, at ~35% smaller size. (libwebp normalizes
   the RGB values of fully transparent pixels; nothing visible changes.)
 - `league-logos/` — league logos (none yet)
+- `sport-icons/<slug>.svg|webp` — per-sport graphics extracted from Polymarket's
+  sports navigation (`polymarket.com/sports` sidebar, NFL through Esports).
+  Generic sport pictograms are SVG with the light-theme color baked into a root
+  `color` attribute (kept as `fill="currentColor"`, so inline consumers can
+  recolor via CSS); branded league marks (NFL/MLB/CFB/UFC/UCL) are raster and
+  stored as **lossless WebP** like the rest. All `source: "polymarket"`,
+  `license: "reference-only"` — display-only, league trademarks apply.
+  Slugs and display labels: `manifest.json` `sportIcons`.
 - `manifest.json` — entity code → file path + `source`/`license` (required)
 
-## Sport icons are not here
+## Generic sport icons are not here
 
-Sport icons are not repackaged; reference `@material-symbols/svg-400` (Apache-2.0)
-directly via jsDelivr:
+Generic sport icons are not repackaged; reference `@material-symbols/svg-400`
+(Apache-2.0) directly via jsDelivr:
 
 ```text
 https://cdn.jsdelivr.net/npm/@material-symbols/svg-400@0.48.0/outlined/{icon}.svg
@@ -37,13 +45,22 @@ https://cdn.jsdelivr.net/npm/@material-symbols/svg-400@0.48.0/outlined/{icon}.sv
 
 `{icon}` = Material Symbols icon name (e.g. `sports_soccer`, `sports_baseball`).
 The sport code → icon name mapping is owned by the consuming service (richlabel `src/lib/assets.ts`).
+Use `sport-icons/` only when the Polymarket-style branded graphic is wanted;
+for neutral UI iconography, Material Symbols stays the default.
 
 ## manifest.json schema
 
 ```json
 {
-  "version": "0.2.0",
-  "sportIcons": {},
+  "version": "0.3.0",
+  "sportIcons": {
+    "soccer": {
+      "file": "sport-icons/soccer.svg",
+      "label": "Soccer",
+      "source": "polymarket",
+      "license": "reference-only"
+    }
+  },
   "teamLogos": {
     "baseball/kbo/kia-tigers": {
       "file": "team-logos/baseball/kbo/kia-tigers.webp",

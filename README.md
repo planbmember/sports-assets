@@ -52,7 +52,7 @@ for neutral UI iconography, Material Symbols stays the default.
 
 ```json
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "sportIcons": {
     "soccer": {
       "file": "sport-icons/soccer.svg",

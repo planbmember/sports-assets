@@ -1,6 +1,6 @@
 # sports-assets
 
-Static sports assets (sport icons, team/league logos) packaged for serving via the jsDelivr CDN.
+Static sports assets (sport icons, team/league logos).
 
 ## CDN URL
 

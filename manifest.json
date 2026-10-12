@@ -1,6 +1,6 @@
 {
-  "version": "0.4.0",
-  "licenseNote": "naver pstatic emblems and TheSportsDB badges are club-owned trademarks; hotlink/mirror for internal pilot only, redistribution rights unclear.",
+  "version": "0.5.0",
+  "licenseNote": "naver pstatic emblems and TheSportsDB badges are club-owned trademarks; hotlink/mirror for internal pilot only, redistribution rights unclear. Polymarket sport icons are league/event trademarks; display-only reference.",
   "sportIcons": {
     "aussie-rules": {
       "file": "sport-icons/aussie-rules.svg",
@@ -888,6 +888,131 @@
     "naver/team-logos/soccer/k-league-2/yongin-fc": {
       "file": "archive/naver/team-logos/soccer/k-league-2/yongin-fc.webp",
       "source": "naver",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/aussie-rules": {
+      "file": "archive/polymarket/sport-icons/aussie-rules.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/baseball": {
+      "file": "archive/polymarket/sport-icons/baseball.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/basketball": {
+      "file": "archive/polymarket/sport-icons/basketball.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/cfb": {
+      "file": "archive/polymarket/sport-icons/cfb.webp",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/chess": {
+      "file": "archive/polymarket/sport-icons/chess.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/cricket": {
+      "file": "archive/polymarket/sport-icons/cricket.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/cycling": {
+      "file": "archive/polymarket/sport-icons/cycling.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/darts": {
+      "file": "archive/polymarket/sport-icons/darts.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/esports": {
+      "file": "archive/polymarket/sport-icons/esports.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/football": {
+      "file": "archive/polymarket/sport-icons/football.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/golf": {
+      "file": "archive/polymarket/sport-icons/golf.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/handball": {
+      "file": "archive/polymarket/sport-icons/handball.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/hockey": {
+      "file": "archive/polymarket/sport-icons/hockey.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/mlb": {
+      "file": "archive/polymarket/sport-icons/mlb.webp",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/mma": {
+      "file": "archive/polymarket/sport-icons/mma.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/motorsports": {
+      "file": "archive/polymarket/sport-icons/motorsports.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/nfl": {
+      "file": "archive/polymarket/sport-icons/nfl.webp",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/pickleball": {
+      "file": "archive/polymarket/sport-icons/pickleball.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/rugby": {
+      "file": "archive/polymarket/sport-icons/rugby.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/soccer": {
+      "file": "archive/polymarket/sport-icons/soccer.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/table-tennis": {
+      "file": "archive/polymarket/sport-icons/table-tennis.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/tennis": {
+      "file": "archive/polymarket/sport-icons/tennis.svg",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/ucl": {
+      "file": "archive/polymarket/sport-icons/ucl.webp",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/ufc": {
+      "file": "archive/polymarket/sport-icons/ufc.webp",
+      "source": "polymarket",
+      "license": "reference-only"
+    },
+    "polymarket/sport-icons/unl": {
+      "file": "archive/polymarket/sport-icons/unl.svg",
+      "source": "polymarket",
       "license": "reference-only"
     },
     "thesportsdb/team-logos/baseball/kbo/doosan-bears": {

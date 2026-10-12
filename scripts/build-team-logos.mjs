@@ -1,7 +1,14 @@
-// Imports the richlabel team logo pilot (assets/team-logos/pilot) into this package's
-// team-logos/ and regenerates manifest.json. All raster assets are stored as lossless
-// WebP (org rule: image assets in this package are WebP; SVG stays SVG) — pilot PNGs
-// are converted on import via sharp (npm prebuilt binaries; no system ImageMagick).
+// Imports the richlabel team logo pilot (assets/team-logos/pilot) into this package:
+//   1. archive/<source>/team-logos/... — every collected file, kept per source
+//      (append-only provenance tree; admins trace any asset back to its source here).
+//      Archive is never wiped; re-imports overwrite the same paths.
+//   2. team-logos/ — the representative set (wiped + regenerated each run).
+//   3. manifest.json — teamLogos regenerated; sportIcons/leagueLogos/archive
+//      sections of the existing manifest are preserved/merged, not reset.
+//
+// All raster assets are stored as lossless WebP (org rule: image assets in this
+// package are WebP; SVG stays SVG) — pilot PNGs are converted on import via sharp
+// (npm prebuilt binaries; no system ImageMagick).
 //
 //   node scripts/build-team-logos.mjs <pilot-dir>
 //
@@ -9,6 +16,8 @@
 // Club slugs are derived from the TheSportsDB English team name; naver-only rows are
 // attached to their canonical club via NAVER_SLUG_MAP below. Rows sharing a slug are
 // merged into one club (naver as the primary file, sportsdb as the alternate).
+// ROW_FIXES drops/re-routes only affect the representative set — the archive keeps
+// the dropped variants too.
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -26,6 +35,9 @@ const LEAGUES = {
   5: { sport: "soccer", slug: "k-league-1", sportsdbLeague: "South Korean K League 1" },
   7: { sport: "soccer", slug: "k-league-2", sportsdbLeague: "South Korean K League 2" },
 };
+
+// Pilot source name → canonical Source name (archive dir, manifest source field).
+const SOURCE_DIR = { naver: "naver", sportsdb: "thesportsdb" };
 
 // Canonical club slugs for naver-only rows (no sportsdb English name to derive from).
 const NAVER_SLUG_MAP = {
@@ -62,9 +74,14 @@ const slugify = (name) =>
     .replace(/^-+|-+$/g, "");
 
 const pilot = JSON.parse(readFileSync(join(pilotDir, "manifest.json"), "utf8"));
+const existingManifest = existsSync(join(root, "manifest.json"))
+  ? JSON.parse(readFileSync(join(root, "manifest.json"), "utf8"))
+  : {};
 
 /** @type {Map<string, {teamIds: number[], variants: Map<string, {src: string, bytes: number}>}>} */
 const clubs = new Map();
+/** @type {Map<string, {src: string, bytes: number}>} archive rel-path → source file */
+const archiveFiles = new Map();
 const skipped = [];
 
 for (const row of pilot.results) {
@@ -84,13 +101,27 @@ for (const row of pilot.results) {
     );
   }
   const fix = ROW_FIXES[row.team_id] ?? {};
+  const baseSlug = row.sportsdb?.team ? slugify(row.sportsdb.team) : NAVER_SLUG_MAP[row.naver?.source_id];
+  if (!baseSlug) throw new Error(`no slug for team ${row.team_id} (${row.normalized_name}) — add to NAVER_SLUG_MAP`);
+
+  // archive: keep every collected variant per source, including ones ROW_FIXES
+  // drops from the representative set below.
+  for (const [source, v] of variants) {
+    const slug = fix.variantSlugs?.[source] ?? baseSlug;
+    const rel = `archive/${SOURCE_DIR[source]}/team-logos/${league.sport}/${league.slug}/${slug}.webp`;
+    const prev = archiveFiles.get(rel);
+    if (prev && prev.bytes !== v.bytes) {
+      console.warn(`warn: archive ${rel} differs between rows (${prev.bytes} vs ${v.bytes} bytes) — keeping first`);
+    } else if (!prev) {
+      archiveFiles.set(rel, v);
+    }
+  }
+
   for (const dropped of fix.dropSources ?? []) variants.delete(dropped);
   if (variants.size === 0) {
     skipped.push(`${row.team_id} ${row.normalized_name} (all variants dropped by ROW_FIXES)`);
     continue;
   }
-  const baseSlug = row.sportsdb?.team ? slugify(row.sportsdb.team) : NAVER_SLUG_MAP[row.naver?.source_id];
-  if (!baseSlug) throw new Error(`no slug for team ${row.team_id} (${row.normalized_name}) — add to NAVER_SLUG_MAP`);
   for (const [source, v] of variants) {
     const key = `${league.sport}/${league.slug}/${fix.variantSlugs?.[source] ?? baseSlug}`;
     const club = clubs.get(key) ?? { teamIds: [], variants: new Map() };
@@ -105,7 +136,14 @@ for (const row of pilot.results) {
   }
 }
 
-// regenerate team-logos/
+// 1. archive: append-only per-source tree (overwrite same paths, never wipe)
+for (const [rel, v] of [...archiveFiles.entries()].sort()) {
+  const dest = join(root, rel);
+  mkdirSync(dirname(dest), { recursive: true });
+  await sharp(v.src).webp({ lossless: true }).toFile(dest);
+}
+
+// 2. regenerate the representative set
 rmSync(join(root, "team-logos"), { recursive: true, force: true });
 const teamLogos = {};
 let fileCount = 0;
@@ -130,14 +168,21 @@ for (const [key, club] of [...clubs.entries()].sort()) {
   teamLogos[key] = entry;
 }
 
+// 3. manifest: teamLogos regenerated, other sections preserved/merged
+const archive = { ...(existingManifest.archive ?? {}) };
+for (const rel of archiveFiles.keys()) {
+  const m = rel.match(/^archive\/([^/]+)\/(.+)\.webp$/);
+  archive[`${m[1]}/${m[2]}`] = { file: rel, source: m[1], license: "reference-only" };
+}
 const manifest = {
   version: JSON.parse(readFileSync(join(root, "package.json"), "utf8")).version,
-  licenseNote: pilot.license_note,
-  sportIcons: {},
+  licenseNote: pilot.license_note ?? existingManifest.licenseNote,
+  sportIcons: existingManifest.sportIcons ?? {},
   teamLogos,
-  leagueLogos: {},
+  leagueLogos: existingManifest.leagueLogos ?? {},
+  archive,
 };
 writeFileSync(join(root, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
 
-console.log(`clubs: ${clubs.size}, files copied: ${fileCount}`);
+console.log(`clubs: ${clubs.size}, representative files: ${fileCount}, archive files: ${archiveFiles.size}`);
 if (skipped.length) console.log(`skipped: ${skipped.join("; ")}`);

@@ -24,6 +24,12 @@ Pinning a version gives immutable, long-lived caching. `@latest`/`@main` are for
   pixels are identical to the PNG sources, at ~35% smaller size. (libwebp normalizes
   the RGB values of fully transparent pixels; nothing visible changes.)
 - `league-logos/` — league logos (none yet)
+- `archive/<source>/team-logos/<sport>/<league-slug>/<club-slug>.webp` — **per-source
+  provenance archive**. Every file collected from a source is kept here, including
+  variants that are not in the representative set (dropped alternates, mismatches).
+  Append-only: imports overwrite identical paths but never wipe the tree. This is
+  how an admin answers "which source did this asset come from?" — the path is the
+  provenance. Manifest section: `archive`.
 - `sport-icons/<slug>.svg|webp` — per-sport graphics extracted from Polymarket's
   sports navigation (`polymarket.com/sports` sidebar, NFL through Esports).
   Generic sport pictograms are SVG with the light-theme color baked into a root
@@ -70,12 +76,20 @@ for neutral UI iconography, Material Symbols stays the default.
       "alternate": { "file": "team-logos/baseball/kbo/kia-tigers.sportsdb.webp", "source": "thesportsdb", "license": "reference-only" }
     }
   },
-  "leagueLogos": {}
+  "leagueLogos": {},
+  "archive": {
+    "naver/team-logos/baseball/kbo/kia-tigers": {
+      "file": "archive/naver/team-logos/baseball/kbo/kia-tigers.webp",
+      "source": "naver",
+      "license": "reference-only"
+    }
+  }
 }
 ```
 
-After `scripts/build-team-logos.mjs` (richlabel pilot → import/regenerate manifest),
-run `npm run check` (`scripts/check-manifest.mjs`) to verify files ↔ manifest consistency.
+After `scripts/build-team-logos.mjs` (richlabel pilot → archive per source + regenerate
+representative set + manifest), run `npm run check` (`scripts/check-manifest.mjs`) to
+verify files ↔ manifest consistency.
 
 ## Flags are not here
 
@@ -96,8 +110,9 @@ Conversion runs in GitHub Actions, not on a local machine:
    `manifest.json`) into this repo (default path: `pilot/`), commit, push to main.
 2. Actions tab → `import` workflow → Run workflow (set `pilot-dir` if you used a
    different path). It runs `scripts/build-team-logos.mjs` + `npm run check`, deletes
-   the pilot directory again, and commits the converted WebP files + regenerated
-   `manifest.json` back to main with `[skip ci]`.
+   the pilot directory again, and commits the converted WebP files — per-source
+   `archive/<source>/...` plus the regenerated `team-logos/` representative set —
+   and `manifest.json` back to main with `[skip ci]`.
 3. Verify the import commit, then release as below.
 
 Local fallback: `npm ci && npm run build:team-logos -- <pilot-dir>` needs only Node —

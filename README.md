@@ -1,6 +1,6 @@
 # sports-assets
 
-Static sports assets (sport icons, team/league logos).
+Static sports assets (sport icons, league/team logos, athlete images).
 
 ## CDN URL
 
@@ -16,33 +16,40 @@ Pinning a version gives immutable, long-lived caching. `@latest`/`@main` are for
 
 ## Layout
 
-- `team-logos/<sport>/<league-slug>/<club-slug>.webp` — club logos. When a naver emblem
-  exists it is the primary (no suffix); the TheSportsDB badge is kept as an alternate
-  with a `.<source>.webp` suffix. All raster images are **lossless WebP** (org rule:
-  raster assets in this package are WebP; SVG stays SVG). Conversion happens at import
-  time in `scripts/build-team-logos.mjs` (sharp, `webp({ lossless: true })`) — visible
-  pixels are identical to the PNG sources, at ~35% smaller size. (libwebp normalizes
-  the RGB values of fully transparent pixels; nothing visible changes.)
-- `league-logos/` — league logos (none yet)
-- `archive/<source>/<asset-kind>/...` (e.g. `archive/naver/team-logos/baseball/kbo/kia-tigers.webp`,
-  `archive/polymarket/sport-icons/soccer.svg`) — **per-source provenance archive**.
-  Every file collected from a source is kept here in its original collected form,
-  including variants that are not in the representative set (dropped alternates,
-  mismatches). Append-only: imports overwrite identical paths but never wipe the
-  tree. This is how an admin answers "which source did this asset come from?" —
-  the path is the provenance. Manifest section: `archive`.
-- `sport-icons/<slug>.svg|webp` — **the representative set of sport icons confirmed
-  by richlabel** (currently the 25 polymarket graphics, NFL through Esports). Only
-  richlabel-confirmed representatives live here; the full set collected from each
-  source is preserved separately under `archive/<source>/sport-icons/` (see above).
-  Source: Polymarket's sports navigation (`polymarket.com/sports` sidebar).
-  Generic sport pictograms are SVG with the light-theme color baked into a root
-  `color` attribute (kept as `fill="currentColor"`, so inline consumers can
-  recolor via CSS); branded league marks (NFL/MLB/CFB/UFC/UCL) are raster and
-  stored as **lossless WebP** like the rest. All `source: "polymarket"`,
-  `license: "reference-only"` — display-only, league trademarks apply.
-  Slugs and display labels: `manifest.json` `sportIcons`.
-- `manifest.json` — entity code → file path + `source`/`license` (required)
+Two kinds of trees live here. Neither involves any judgement inside this repo:
+which file represents which entity is decided upstream (richlabel) and exported
+as-is.
+
+**Representative set** (the CDN contract — what consumers reference):
+
+- `sport-icons/<sport>.svg|webp` — one icon per sport.
+- `league-logos/<sport>/<league-slug>.svg|webp` — one logo per league.
+- `team-logos/<sport>/<league-slug>/<club-slug>.svg|webp` — one logo per club.
+  Some entries carry an `alternate` variant (e.g. `<club-slug>.sportsdb.webp`).
+- `athlete-images/<sport>/<athlete-slug>.svg|webp` — one image per athlete
+  (namesakes get an id suffix).
+
+Keys and paths already published stay stable across releases: an entity keeps
+its key, and entries the exporter did not regenerate are carried forward.
+All raster images are **lossless WebP**; SVG stays SVG.
+
+**Per-source archive** (provenance — everything each source served):
+
+- `archive/<source>/<kind>/<source-id>.<sha256-8>.svg|webp` with `<kind>` one of
+  `sport-icons`, `league-logos`, `team-logos`, `athlete-images`.
+- `archive/<source>/index.json` — one entry per collected file: source id, kind,
+  file, original URL, sha256, fetch time, source league id and the source's own
+  label (in the source's language). This answers "where exactly did this file
+  come from".
+- Append-only: a changed graphic gets a new content-hashed file next to the old
+  one. Files kept regardless of whether they ever became representative.
+
+`manifest.json` — the index of the representative set (English labels only):
+
+- `sportIcons`, `leagueLogos`, `teamLogos`, `athleteImages`: key → `file`,
+  `source`, `license` (required), optional `label`, `alternate`, and the upstream
+  entity ids (`richlabelTeamIds` for team logos, `richlabelIds` elsewhere).
+- `archives`: source → path of its `archive/<source>/index.json`.
 
 ## Generic sport icons are not here
 
@@ -62,7 +69,8 @@ for neutral UI iconography, Material Symbols stays the default.
 
 ```json
 {
-  "version": "0.5.0",
+  "version": "0.6.0",
+  "licenseNote": "...",
   "sportIcons": {
     "soccer": {
       "file": "sport-icons/soccer.svg",
@@ -71,6 +79,7 @@ for neutral UI iconography, Material Symbols stays the default.
       "license": "reference-only"
     }
   },
+  "leagueLogos": {},
   "teamLogos": {
     "baseball/kbo/kia-tigers": {
       "file": "team-logos/baseball/kbo/kia-tigers.webp",
@@ -80,20 +89,15 @@ for neutral UI iconography, Material Symbols stays the default.
       "alternate": { "file": "team-logos/baseball/kbo/kia-tigers.sportsdb.webp", "source": "thesportsdb", "license": "reference-only" }
     }
   },
-  "leagueLogos": {},
-  "archive": {
-    "naver/team-logos/baseball/kbo/kia-tigers": {
-      "file": "archive/naver/team-logos/baseball/kbo/kia-tigers.webp",
-      "source": "naver",
-      "license": "reference-only"
-    }
+  "athleteImages": {},
+  "archives": {
+    "polymarket": "archive/polymarket/index.json"
   }
 }
 ```
 
-After `scripts/build-team-logos.mjs` (richlabel pilot → archive per source + regenerate
-representative set + manifest), run `npm run check` (`scripts/check-manifest.mjs`) to
-verify files ↔ manifest consistency.
+`npm run check` (`scripts/check-manifest.mjs`) verifies manifest entries against
+the representative-set files and each archive index against the archive files.
 
 ## Flags are not here
 
@@ -106,21 +110,12 @@ Circular:    https://cdn.jsdelivr.net/gh/hatscripts/circle-flags@2.8.0/flags/{cc
 
 `{cc}` = ISO 3166-1 alpha-2, lowercase. Consuming services follow richlabel's `flags.ts` helper conventions.
 
-## Importing new logos (GHA — no local ImageMagick)
+## Updating assets
 
-Conversion runs in GitHub Actions, not on a local machine:
-
-1. Copy the richlabel pilot directory (`assets/team-logos/pilot`, containing
-   `manifest.json`) into this repo (default path: `pilot/`), commit, push to main.
-2. Actions tab → `import` workflow → Run workflow (set `pilot-dir` if you used a
-   different path). It runs `scripts/build-team-logos.mjs` + `npm run check`, deletes
-   the pilot directory again, and commits the converted WebP files — per-source
-   `archive/<source>/...` plus the regenerated `team-logos/` representative set —
-   and `manifest.json` back to main with `[skip ci]`.
-3. Verify the import commit, then release as below.
-
-Local fallback: `npm ci && npm run build:team-logos -- <pilot-dir>` needs only Node —
-sharp ships prebuilt binaries, no system ImageMagick.
+Content is produced upstream by richlabel: its source connectors append to
+`archive/<source>/`, and its export command rewrites the representative set and
+`manifest.json` in a checkout of this repo. Review the diff, run `npm run check`,
+commit, then release as below.
 
 ## Releases (GHA only — no local publish)
 

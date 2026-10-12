@@ -1,7 +1,7 @@
 {
   "name": "sports-assets",
-  "version": "0.5.0",
-  "description": "Static sports asset pack (sport icons, team/league logos)",
+  "version": "0.6.0",
+  "description": "Static sports asset pack (sport icons, league/team logos, athlete images)",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -10,8 +10,9 @@
   "type": "module",
   "files": [
     "sport-icons",
-    "team-logos",
     "league-logos",
+    "team-logos",
+    "athlete-images",
     "manifest.json",
     "archive"
   ],
@@ -19,8 +20,7 @@
     "access": "public"
   },
   "scripts": {
-    "check": "node scripts/check-manifest.mjs",
-    "build:team-logos": "node scripts/build-team-logos.mjs"
+    "check": "node scripts/check-manifest.mjs"
   },
   "devDependencies": {
     "sharp": "^0.34.5"

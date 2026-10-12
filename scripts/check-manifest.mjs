@@ -35,7 +35,7 @@ const checkEntry = (section, key, entry) => {
   if (entry.alternate) checkEntry(`${section}.${key}.alternate`, key, entry.alternate);
 };
 
-for (const section of ["sportIcons", "teamLogos", "leagueLogos"]) {
+for (const section of ["sportIcons", "teamLogos", "leagueLogos", "archive"]) {
   for (const [key, entry] of Object.entries(manifest[section] ?? {})) checkEntry(section, key, entry);
 }
 
@@ -47,7 +47,7 @@ const walk = (dir) => {
   });
 };
 
-for (const dir of ["sport-icons", "team-logos", "league-logos"]) {
+for (const dir of ["sport-icons", "team-logos", "league-logos", "archive"]) {
   for (const abs of walk(join(root, dir))) {
     const rel = abs.slice(root.length + 1);
     if (!referenced.has(rel)) errors.push(`unreferenced file: ${rel}`);

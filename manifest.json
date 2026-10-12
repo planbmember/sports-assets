@@ -1,6 +1,6 @@
 {
   "version": "0.6.0",
-  "licenseNote": "naver pstatic emblems and TheSportsDB badges are club-owned trademarks; hotlink/mirror for internal pilot only, redistribution rights unclear. Polymarket sport icons are league/event trademarks; display-only reference.",
+  "licenseNote": "Logos, emblems and icons are trademarks of their respective owners (sources: naver, polymarket, thesportsdb); display-only reference, redistribution rights unclear. Per-file provenance: archive/<source>/index.json.",
   "sportIcons": {
     "aussie-rules": {
       "file": "sport-icons/aussie-rules.svg",

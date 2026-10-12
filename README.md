@@ -24,14 +24,18 @@ Pinning a version gives immutable, long-lived caching. `@latest`/`@main` are for
   pixels are identical to the PNG sources, at ~35% smaller size. (libwebp normalizes
   the RGB values of fully transparent pixels; nothing visible changes.)
 - `league-logos/` — league logos (none yet)
-- `archive/<source>/team-logos/<sport>/<league-slug>/<club-slug>.webp` — **per-source
-  provenance archive**. Every file collected from a source is kept here, including
-  variants that are not in the representative set (dropped alternates, mismatches).
-  Append-only: imports overwrite identical paths but never wipe the tree. This is
-  how an admin answers "which source did this asset come from?" — the path is the
-  provenance. Manifest section: `archive`.
-- `sport-icons/<slug>.svg|webp` — per-sport graphics extracted from Polymarket's
-  sports navigation (`polymarket.com/sports` sidebar, NFL through Esports).
+- `archive/<source>/<asset-kind>/...` (e.g. `archive/naver/team-logos/baseball/kbo/kia-tigers.webp`,
+  `archive/polymarket/sport-icons/soccer.svg`) — **per-source provenance archive**.
+  Every file collected from a source is kept here in its original collected form,
+  including variants that are not in the representative set (dropped alternates,
+  mismatches). Append-only: imports overwrite identical paths but never wipe the
+  tree. This is how an admin answers "which source did this asset come from?" —
+  the path is the provenance. Manifest section: `archive`.
+- `sport-icons/<slug>.svg|webp` — **the representative set of sport icons confirmed
+  by richlabel** (currently the 25 polymarket graphics, NFL through Esports). Only
+  richlabel-confirmed representatives live here; the full set collected from each
+  source is preserved separately under `archive/<source>/sport-icons/` (see above).
+  Source: Polymarket's sports navigation (`polymarket.com/sports` sidebar).
   Generic sport pictograms are SVG with the light-theme color baked into a root
   `color` attribute (kept as `fill="currentColor"`, so inline consumers can
   recolor via CSS); branded league marks (NFL/MLB/CFB/UFC/UCL) are raster and
@@ -58,7 +62,7 @@ for neutral UI iconography, Material Symbols stays the default.
 
 ```json
 {
-  "version": "0.3.1",
+  "version": "0.5.0",
   "sportIcons": {
     "soccer": {
       "file": "sport-icons/soccer.svg",

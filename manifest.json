@@ -1,8 +1,9 @@
 {
-  "version": "0.6.0",
+  "version": "0.7.0",
   "licenseNote": "Logos, emblems and icons are trademarks of their respective owners (sources: naver-sports, oddsportal, polymarket, sportsnavi, thesportsdb); display-only reference, redistribution rights unclear. Per-file provenance: archive/<source>/index.json.",
   "sportIcons": {
     "american-football": {
+      "package": "sports-assets",
       "file": "sport-icons/american-football.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -12,6 +13,7 @@
       "label": "American Football"
     },
     "aussie-rules": {
+      "package": "sports-assets",
       "file": "sport-icons/aussie-rules.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -21,6 +23,7 @@
       "label": "Aussie Rules"
     },
     "baseball": {
+      "package": "sports-assets",
       "file": "sport-icons/baseball.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -30,6 +33,7 @@
       "label": "Baseball"
     },
     "basketball": {
+      "package": "sports-assets",
       "file": "sport-icons/basketball.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -42,9 +46,11 @@
       "file": "sport-icons/cfb.webp",
       "label": "College Football",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     },
     "chess": {
+      "package": "sports-assets",
       "file": "sport-icons/chess.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -54,6 +60,7 @@
       "label": "Chess"
     },
     "cricket": {
+      "package": "sports-assets",
       "file": "sport-icons/cricket.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -63,6 +70,7 @@
       "label": "Cricket"
     },
     "cycling": {
+      "package": "sports-assets",
       "file": "sport-icons/cycling.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -72,6 +80,7 @@
       "label": "Cycling"
     },
     "darts": {
+      "package": "sports-assets",
       "file": "sport-icons/darts.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -81,6 +90,7 @@
       "label": "Darts"
     },
     "esports": {
+      "package": "sports-assets",
       "file": "sport-icons/esports.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -93,9 +103,11 @@
       "file": "sport-icons/football.svg",
       "label": "Football",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     },
     "golf": {
+      "package": "sports-assets",
       "file": "sport-icons/golf.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -105,6 +117,7 @@
       "label": "Golf"
     },
     "handball": {
+      "package": "sports-assets",
       "file": "sport-icons/handball.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -117,9 +130,11 @@
       "file": "sport-icons/hockey.svg",
       "label": "Hockey",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     },
     "ice-hockey": {
+      "package": "sports-assets",
       "file": "sport-icons/ice-hockey.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -132,9 +147,11 @@
       "file": "sport-icons/mlb.webp",
       "label": "MLB",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     },
     "mma": {
+      "package": "sports-assets",
       "file": "sport-icons/mma.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -144,6 +161,7 @@
       "label": "MMA"
     },
     "motorsport": {
+      "package": "sports-assets",
       "file": "sport-icons/motorsport.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -156,15 +174,18 @@
       "file": "sport-icons/motorsports.svg",
       "label": "Motorsports",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     },
     "nfl": {
       "file": "sport-icons/nfl.webp",
       "label": "NFL",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     },
     "pickleball": {
+      "package": "sports-assets",
       "file": "sport-icons/pickleball.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -174,6 +195,7 @@
       "label": "Pickleball"
     },
     "rugby": {
+      "package": "sports-assets",
       "file": "sport-icons/rugby.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -183,6 +205,7 @@
       "label": "Rugby"
     },
     "soccer": {
+      "package": "sports-assets",
       "file": "sport-icons/soccer.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -192,6 +215,7 @@
       "label": "Soccer"
     },
     "table-tennis": {
+      "package": "sports-assets",
       "file": "sport-icons/table-tennis.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -201,6 +225,7 @@
       "label": "Table Tennis"
     },
     "tennis": {
+      "package": "sports-assets",
       "file": "sport-icons/tennis.svg",
       "source": "polymarket",
       "license": "reference-only",
@@ -213,24 +238,28 @@
       "file": "sport-icons/ucl.webp",
       "label": "UEFA Champions League",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     },
     "ufc": {
       "file": "sport-icons/ufc.webp",
       "label": "UFC",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     },
     "unl": {
       "file": "sport-icons/unl.svg",
       "label": "UNL",
       "source": "polymarket",
-      "license": "reference-only"
+      "license": "reference-only",
+      "package": "sports-assets"
     }
   },
   "leagueLogos": {},
   "teamLogos": {
     "baseball/kbo/doosan-bears": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/doosan-bears.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -244,6 +273,7 @@
       }
     },
     "baseball/kbo/hanwha-eagles": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/hanwha-eagles.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -257,6 +287,7 @@
       }
     },
     "baseball/kbo/kia-tigers": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/kia-tigers.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -271,6 +302,7 @@
       }
     },
     "baseball/kbo/kiwoom-heroes": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/kiwoom-heroes.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -285,6 +317,7 @@
       }
     },
     "baseball/kbo/kt-wiz": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/kt-wiz.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -299,6 +332,7 @@
       }
     },
     "baseball/kbo/lg-twins": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/lg-twins.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -313,6 +347,7 @@
       }
     },
     "baseball/kbo/lotte-giants": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/lotte-giants.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -326,6 +361,7 @@
       }
     },
     "baseball/kbo/nc-dinos": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/nc-dinos.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -340,6 +376,7 @@
       }
     },
     "baseball/kbo/samsung-lions": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/samsung-lions.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -353,6 +390,7 @@
       }
     },
     "baseball/kbo/ssg-landers": {
+      "package": "sports-assets",
       "file": "team-logos/baseball/kbo/ssg-landers.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -367,6 +405,7 @@
       }
     },
     "soccer/k-league-1/bucheon-fc-1995": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/bucheon-fc-1995.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -382,6 +421,7 @@
       }
     },
     "soccer/k-league-1/daejeon-hana-citizen": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/daejeon-hana-citizen.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -397,6 +437,7 @@
       }
     },
     "soccer/k-league-1/fc-anyang": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/fc-anyang.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -412,6 +453,7 @@
       }
     },
     "soccer/k-league-1/fc-seoul": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/fc-seoul.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -427,6 +469,7 @@
       }
     },
     "soccer/k-league-1/gangwon-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/gangwon-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -442,6 +485,7 @@
       }
     },
     "soccer/k-league-1/gimcheon-sangmu": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/gimcheon-sangmu.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -457,6 +501,7 @@
       }
     },
     "soccer/k-league-1/gwangju-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/gwangju-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -472,6 +517,7 @@
       }
     },
     "soccer/k-league-1/incheon-united": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/incheon-united.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -487,6 +533,7 @@
       }
     },
     "soccer/k-league-1/jeju-sk": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/jeju-sk.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -502,6 +549,7 @@
       }
     },
     "soccer/k-league-1/jeonbuk-hyundai-motors": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/jeonbuk-hyundai-motors.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -517,6 +565,7 @@
       }
     },
     "soccer/k-league-1/pohang-steelers": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/pohang-steelers.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -532,6 +581,7 @@
       }
     },
     "soccer/k-league-1/ulsan-hd": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-1/ulsan-hd.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -547,6 +597,7 @@
       }
     },
     "soccer/k-league-2/ansan-greeners": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/ansan-greeners.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -562,6 +613,7 @@
       }
     },
     "soccer/k-league-2/busan-ipark": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/busan-ipark.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -577,6 +629,7 @@
       }
     },
     "soccer/k-league-2/cheonan-city": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/cheonan-city.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -592,6 +645,7 @@
       }
     },
     "soccer/k-league-2/chungbuk-cheongju": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/chungbuk-cheongju.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -607,6 +661,7 @@
       }
     },
     "soccer/k-league-2/chungnam-asan": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/chungnam-asan.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -622,6 +677,7 @@
       }
     },
     "soccer/k-league-2/daegu-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/daegu-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -636,6 +692,7 @@
       }
     },
     "soccer/k-league-2/gimhae-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/gimhae-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -651,6 +708,7 @@
       }
     },
     "soccer/k-league-2/gimpo-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/gimpo-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -666,6 +724,7 @@
       }
     },
     "soccer/k-league-2/gyeongnam-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/gyeongnam-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -681,6 +740,7 @@
       }
     },
     "soccer/k-league-2/hwaseong-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/hwaseong-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -696,6 +756,7 @@
       }
     },
     "soccer/k-league-2/jeonnam-dragons": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/jeonnam-dragons.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -711,6 +772,7 @@
       }
     },
     "soccer/k-league-2/paju-frontier": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/paju-frontier.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -726,6 +788,7 @@
       }
     },
     "soccer/k-league-2/seongnam-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/seongnam-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -741,6 +804,7 @@
       }
     },
     "soccer/k-league-2/seoul-e-land": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/seoul-e-land.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -756,6 +820,7 @@
       }
     },
     "soccer/k-league-2/suwon-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/suwon-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -769,6 +834,7 @@
       }
     },
     "soccer/k-league-2/suwon-samsung-bluewings": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/suwon-samsung-bluewings.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -783,6 +849,7 @@
       }
     },
     "soccer/k-league-2/yongin-fc": {
+      "package": "sports-assets",
       "file": "team-logos/soccer/k-league-2/yongin-fc.webp",
       "source": "naver-sports",
       "license": "reference-only",
@@ -798,5 +865,32 @@
     "polymarket": "archive/polymarket/index.json",
     "sportsnavi": "archive/sportsnavi/index.json",
     "thesportsdb": "archive/thesportsdb/index.json"
+  },
+  "archivePackages": {
+    "naver-sports": [
+      "sports-assets-archive-naver-sports"
+    ],
+    "oddsportal": [
+      "sports-assets-archive-oddsportal"
+    ],
+    "polymarket": [
+      "sports-assets-archive-polymarket-athlete-images",
+      "sports-assets-archive-polymarket-league-logos",
+      "sports-assets-archive-polymarket-sport-icons",
+      "sports-assets-archive-polymarket-team-logos-1",
+      "sports-assets-archive-polymarket-team-logos-2",
+      "sports-assets-archive-polymarket-team-logos-3",
+      "sports-assets-archive-polymarket-team-logos-4",
+      "sports-assets-archive-polymarket-team-logos-5",
+      "sports-assets-archive-polymarket-team-logos-6",
+      "sports-assets-archive-polymarket-team-logos-7",
+      "sports-assets-archive-polymarket-team-logos-8"
+    ],
+    "sportsnavi": [
+      "sports-assets-archive-sportsnavi"
+    ],
+    "thesportsdb": [
+      "sports-assets-archive-thesportsdb"
+    ]
   }
 }

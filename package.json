@@ -13,13 +13,15 @@
     "league-logos",
     "team-logos",
     "athlete-images",
+    "regions",
     "manifest.json"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "check": "node scripts/check-manifest.mjs"
+    "check": "node scripts/check-manifest.mjs",
+    "build:packages": "node scripts/build-packages.mjs"
   },
   "devDependencies": {
     "sharp": "^0.34.5"

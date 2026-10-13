@@ -33,9 +33,14 @@ Keys and paths already published stay stable across releases: an entity keeps
 its key, and entries the exporter did not regenerate are carried forward.
 All raster images are **lossless WebP**; SVG stays SVG.
 
-**Per-source archive** (provenance — everything each source served). The archive
-lives in this git repository only; it is not part of the npm package, so it is
-not served by the package CDN:
+**Region layer** — `regions/<region>/manifest.json`: every key of the root
+manifest as one Region sees it (label in the Region's language and the icon
+file), with `labelOrigin` / `fileOrigin` telling whether the value is the
+Region's own, borrowed from a same-language Region (`sibling`) or the global
+default. A Region's own icons live under `regions/<region>/<dir>/`.
+
+**Per-source archive** (provenance — everything each source served). It is
+published in separate archive packages (see Packages):
 
 - `archive/<source>/<kind>/<source-id>.<sha256-8>.svg|webp` with `<kind>` one of
   `sport-icons`, `league-logos`, `team-logos`, `athlete-images`.
@@ -51,8 +56,27 @@ not served by the package CDN:
 - `sportIcons`, `leagueLogos`, `teamLogos`, `athleteImages`: key → `file`,
   `source`, `license` (required), optional `label`, `alternate`, and the upstream
   entity ids (`richlabelTeamIds` for team logos, `richlabelIds` elsewhere).
-- `archives`: source → path of its `archive/<source>/index.json` (repository
-  path; not in the npm package).
+- `archives`: source → path of its `archive/<source>/index.json`.
+- `archivePackages`: source → the packages carrying its archive.
+- every entry also names its `package`.
+
+## Packages
+
+The tree is published as several npm packages so each stays within the CDN
+size limits (package < 150 MB, file < 20 MB). `packages.json` (written
+upstream, like the manifest) lists every package and its files:
+
+- `sports-assets` — root `manifest.json`, `regions/` and the representative
+  set. Its published `manifest.json` carries `packages`: package name →
+  version for every other package. Pin this one package; build any other
+  URL from the entry's `package` and that version.
+- `sports-assets-archive-<source>[-<kind>[-<n>]]` — one source's archive; a
+  source splits by kind, and a kind into numbered chunks of whole source
+  leagues, only when it outgrows the limit. Each archive package carries the
+  part of `archive/<source>/index.json` that covers its own files.
+  `manifest.json` `archivePackages` lists them per source.
+
+Raster images are stored in Git LFS; SVG and JSON stay in git.
 
 ## Generic sport icons are not here
 
@@ -125,7 +149,10 @@ commit, then release as below.
 Pushes/tags are handled by GitHub Actions. Do not run `npm publish` locally.
 
 - PR / push to main → `ci` workflow runs `npm run check` (manifest consistency)
-- push a `v*` tag → `publish` workflow runs `npm publish` via npm trusted publishing (OIDC)
+- push a `v*` tag → `publish` workflow publishes every package whose content
+  changed (next patch version) and then `sports-assets` at the tag version, via
+  npm trusted publishing (OIDC). A package's very first publish uses the
+  `NPM_TOKEN` secret until its trusted publisher is configured.
 - To republish the current main without a tag, manually dispatch `publish` from the Actions tab
 
 ## License

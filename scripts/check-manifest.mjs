@@ -5,6 +5,11 @@
 // - every archive/<source>/index.json is listed in manifest.archives, belongs
 //   to its source, and lists files that exist; every file under archive/ is
 //   either an index or listed in its source's index
+// - regions/<region>/manifest.json entries point at existing files, and every
+//   file under regions/<region>/<dir>/ is referenced by its Region manifest
+// - packages.json (npm package ledger) places every representative, regions/
+//   and archive media file in exactly one package, within the size limit, and
+//   manifest `package` / `archivePackages` names match it
 // Exit code 0 = consistent, 1 = mismatch.
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -99,11 +104,65 @@ for (const abs of walk(archiveRoot)) {
   if (!archived.has(rel(abs))) errors.push(`archive file not in its index: ${rel(abs)}`);
 }
 
+// Region layer manifests.
+const regionsRoot = join(root, "regions");
+const regions = existsSync(regionsRoot) ? readdirSync(regionsRoot).filter((n) => statSync(join(regionsRoot, n)).isDirectory()) : [];
+const regionReferenced = new Set();
+let regionEntryCount = 0;
+for (const region of regions) {
+  const path = `regions/${region}/manifest.json`;
+  if (!existsSync(join(root, path))) { errors.push(`${path}: missing`); continue; }
+  const rm = JSON.parse(readFileSync(join(root, path), "utf8"));
+  if (rm.region !== region) errors.push(`${path}: region ${rm.region} != ${region}`);
+  regionReferenced.add(path);
+  for (const section of SECTIONS) {
+    for (const [key, entry] of Object.entries(rm[section] ?? {})) {
+      regionEntryCount += 1;
+      if (!entry.file || !safePath(entry.file)) errors.push(`${path} ${section}.${key}: bad file ${entry.file}`);
+      else if (!existsSync(join(root, entry.file))) errors.push(`${path} ${section}.${key}: file not found: ${entry.file}`);
+      else regionReferenced.add(entry.file);
+      if (!manifest[section]?.[key]) errors.push(`${path} ${section}.${key}: not in the root manifest`);
+    }
+  }
+  for (const abs of walk(join(regionsRoot, region))) {
+    if (!regionReferenced.has(rel(abs))) errors.push(`unreferenced file: ${rel(abs)}`);
+  }
+}
+
+// npm package ledger.
+const ledgerPath = join(root, "packages.json");
+let packageCount = 0;
+if (existsSync(ledgerPath)) {
+  const ledger = JSON.parse(readFileSync(ledgerPath, "utf8"));
+  const owner = new Map();
+  for (const [name, pkg] of Object.entries(ledger.packages ?? {})) {
+    packageCount += 1;
+    if (pkg.bytes > ledger.hardLimitBytes) errors.push(`packages.json ${name}: ${pkg.bytes} bytes > ${ledger.hardLimitBytes}`);
+    for (const file of pkg.files ?? []) {
+      if (owner.has(file)) errors.push(`packages.json: ${file} in ${owner.get(file)} and ${name}`);
+      owner.set(file, name);
+      if (!existsSync(join(root, file))) errors.push(`packages.json ${name}: file not found: ${file}`);
+    }
+  }
+  const mustOwn = [...referenced, ...regionReferenced, "manifest.json", ...[...archived].filter((f) => !f.endsWith("/index.json"))];
+  for (const file of mustOwn) if (!owner.has(file)) errors.push(`packages.json: ${file} is in no package`);
+  const entryPackage = (section, key, entry) => {
+    if (entry.package && owner.get(entry.file) !== entry.package) errors.push(`${section}.${key}: package ${entry.package} does not hold ${entry.file}`);
+  };
+  for (const section of SECTIONS) for (const [key, entry] of Object.entries(manifest[section] ?? {})) entryPackage(section, key, entry);
+  for (const [source, names] of Object.entries(manifest.archivePackages ?? {})) {
+    for (const name of names) if (!ledger.packages?.[name] || ledger.packages[name].unit?.source !== source) errors.push(`manifest.archivePackages.${source}: ${name} not a ${source} package`);
+  }
+} else if (regions.length || manifest.archivePackages) {
+  errors.push("packages.json: missing");
+}
+
 if (errors.length) {
   console.error(errors.map((e) => `FAIL ${e}`).join("\n"));
   process.exit(1);
 }
 console.log(
   `ok: ${entryCount} manifest entries, ${referenced.size} referenced files; ` +
-    `${indexCount} archive indexes, ${archiveEntryCount} archive entries`,
+    `${indexCount} archive indexes, ${archiveEntryCount} archive entries; ` +
+    `${regions.length} regions, ${regionEntryCount} region entries; ${packageCount} packages`,
 );

@@ -5,6 +5,10 @@ on:
     tags: ["v*"]
   workflow_dispatch:
 
+# Publishes the packages listed in packages.json: every shard whose content
+# changed (next patch version) and the core package "sports-assets" (tag
+# version, last — its manifest pins the shard versions). Only the files of
+# those packages are fetched from Git LFS.
 jobs:
   npm:
     runs-on: ubuntu-latest
@@ -13,10 +17,30 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          registry-url: https://registry.npmjs.org
       # trusted publishing requires npm >= 11.5.1 (node 22 ships npm 10)
       - run: npm install -g npm@latest
       - run: npm run check
-      - run: npm publish --access public
+      - name: plan
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          if [ "$GITHUB_REF_TYPE" != tag ]; then version="$(node -p 'require("./package.json").version')"; fi
+          node scripts/build-packages.mjs plan --version "$version"
+      - name: fetch LFS files of the planned packages
+        run: |
+          xargs -a build/lfs-files.txt -n 200 sh -c 'git lfs pull --include="$(printf "%s," "$@" | sed "s/,$//")"' _
+      - run: node scripts/build-packages.mjs stage
+      - name: publish
+        env:
+          # Bootstrap only: a package's first publish cannot use OIDC (trusted
+          # publishing is configured per existing package). Unset afterwards.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          for name in $(node -p 'require("./build/plan.json").publish.join(" ")'); do
+            npm publish "build/$name" --access public
+          done

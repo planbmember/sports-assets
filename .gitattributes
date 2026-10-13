@@ -1,3 +1,4 @@
+# Raster media live in Git LFS; SVG and JSON stay in git (text, small).
 *.webp filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text

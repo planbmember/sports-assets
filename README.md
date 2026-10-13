@@ -156,7 +156,7 @@ Pushes/tags are handled by GitHub Actions. Do not run `npm publish` locally.
   Trusted publishing can only be attached to an existing package, so a
   maintainer runs `node scripts/build-packages.mjs plan && node
   scripts/build-packages.mjs stage`, publishes the new package from
-  `build/<name>` with `npm publish`, and then adds its trusted publisher
+  `./build/<name>` with `npm publish` (the `./` keeps npm from reading it as a GitHub repo), and then adds its trusted publisher
   (GitHub Actions, this repository, `publish.yml`, with publish permission).
 - To republish the current main without a tag, manually dispatch `publish` from the Actions tab
 

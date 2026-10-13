@@ -41,5 +41,5 @@ jobs:
       - name: publish
         run: |
           for name in $(node -p 'require("./build/plan.json").publish.join(" ")'); do
-            npm publish "build/$name" --access public
+            npm publish "./build/$name" --access public
           done

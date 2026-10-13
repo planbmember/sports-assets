@@ -151,8 +151,13 @@ Pushes/tags are handled by GitHub Actions. Do not run `npm publish` locally.
 - PR / push to main → `ci` workflow runs `npm run check` (manifest consistency)
 - push a `v*` tag → `publish` workflow publishes every package whose content
   changed (next patch version) and then `sports-assets` at the tag version, via
-  npm trusted publishing (OIDC). A package's very first publish uses the
-  `NPM_TOKEN` secret until its trusted publisher is configured.
+  npm trusted publishing (OIDC)
+- The one exception to "no local publish": a **new** package's first version.
+  Trusted publishing can only be attached to an existing package, so a
+  maintainer runs `node scripts/build-packages.mjs plan && node
+  scripts/build-packages.mjs stage`, publishes the new package from
+  `build/<name>` with `npm publish`, and then adds its trusted publisher
+  (GitHub Actions, this repository, `publish.yml`, with publish permission).
 - To republish the current main without a tag, manually dispatch `publish` from the Actions tab
 
 ## License

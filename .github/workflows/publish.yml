@@ -35,11 +35,10 @@ jobs:
         run: |
           xargs -a build/lfs-files.txt -n 200 sh -c 'git lfs pull --include="$(printf "%s," "$@" | sed "s/,$//")"' _
       - run: node scripts/build-packages.mjs stage
+      # npm trusted publishing (OIDC) only. A brand-new package cannot use it
+      # yet: publish its first version by hand (see README), then add its
+      # trusted publisher; plan skips it here while its content is unchanged.
       - name: publish
-        env:
-          # Bootstrap only: a package's first publish cannot use OIDC (trusted
-          # publishing is configured per existing package). Unset afterwards.
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           for name in $(node -p 'require("./build/plan.json").publish.join(" ")'); do
             npm publish "build/$name" --access public

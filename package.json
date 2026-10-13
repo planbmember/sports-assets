@@ -13,8 +13,7 @@
     "league-logos",
     "team-logos",
     "athlete-images",
-    "manifest.json",
-    "archive"
+    "manifest.json"
   ],
   "publishConfig": {
     "access": "public"

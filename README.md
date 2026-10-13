@@ -33,7 +33,9 @@ Keys and paths already published stay stable across releases: an entity keeps
 its key, and entries the exporter did not regenerate are carried forward.
 All raster images are **lossless WebP**; SVG stays SVG.
 
-**Per-source archive** (provenance — everything each source served):
+**Per-source archive** (provenance — everything each source served). The archive
+lives in this git repository only; it is not part of the npm package, so it is
+not served by the package CDN:
 
 - `archive/<source>/<kind>/<source-id>.<sha256-8>.svg|webp` with `<kind>` one of
   `sport-icons`, `league-logos`, `team-logos`, `athlete-images`.
@@ -49,7 +51,8 @@ All raster images are **lossless WebP**; SVG stays SVG.
 - `sportIcons`, `leagueLogos`, `teamLogos`, `athleteImages`: key → `file`,
   `source`, `license` (required), optional `label`, `alternate`, and the upstream
   entity ids (`richlabelTeamIds` for team logos, `richlabelIds` elsewhere).
-- `archives`: source → path of its `archive/<source>/index.json`.
+- `archives`: source → path of its `archive/<source>/index.json` (repository
+  path; not in the npm package).
 
 ## Generic sport icons are not here
 

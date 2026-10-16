@@ -5,7 +5,7 @@
 //   node scripts/build-packages.mjs stage                 copy files into build/
 //
 // plan: a package is published when its contentHash differs from the one on
-// the registry (`npm view <name> contentHash`); shards get the next patch
+// the registry (latest version, read anonymously); shards get the next patch
 // version (0.1.0 when new). The core package ("sports-assets") is published on
 // every release with the tag version and carries `packages` (name -> version)
 // in its manifest.json. Writes build/plan.json and build/lfs-files.txt (the
@@ -15,7 +15,6 @@
 // package.json, and gives every archive package the fragment of
 // archive/<source>/index.json that covers its own files. Fails when a staged
 // package or file breaks the size limits.
-import { spawnSync } from "node:child_process";
 import { copyFileSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -30,10 +29,13 @@ const flag = (name) => { const i = rest.indexOf(name); return i >= 0 ? rest[i + 
 const ledger = readJson("packages.json");
 const corePkg = readJson("package.json");
 
-function published(name) {
-  const res = spawnSync("npm", ["view", name, "version", "contentHash", "--json"], { encoding: "utf8" });
-  if (res.status !== 0) return null; // E404: never published
-  const out = JSON.parse(res.stdout || "{}");
+// Anonymous registry read: in CI, setup-node's .npmrc carries a placeholder
+// token that makes `npm view` fail with 401. Only 404 means never published.
+async function published(name) {
+  const res = await fetch(`https://registry.npmjs.org/${name}/latest`);
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`registry ${name}: HTTP ${res.status}`);
+  const out = await res.json();
   return { version: out.version ?? null, contentHash: out.contentHash ?? null };
 }
 const nextPatch = (v) => { const [a, b, c] = v.split(".").map(Number); return `${a}.${b}.${c + 1}`; };
@@ -43,7 +45,7 @@ if (mode === "plan") {
   const plan = { core: { name: CORE, version: coreVersion }, packages: {}, publish: [] };
   for (const [name, pkg] of Object.entries(ledger.packages)) {
     if (name === CORE) continue;
-    const current = published(name);
+    const current = await published(name);
     if (current && current.contentHash === pkg.contentHash) {
       plan.packages[name] = current.version;
       continue;

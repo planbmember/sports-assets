@@ -1,5 +1,5 @@
 {
-  "version": "0.8.1",
+  "version": "0.9.0",
   "region": "kr",
   "locale": "ko",
   "sportIcons": {
@@ -21,6 +21,24 @@
       "label": "호주식 축구",
       "labelOrigin": "region"
     },
+    "badminton": {
+      "package": "sports-assets",
+      "file": "sport-icons/badminton.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "배드민턴",
+      "labelOrigin": "region"
+    },
+    "bandy": {
+      "package": "sports-assets",
+      "file": "sport-icons/bandy.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "밴디",
+      "labelOrigin": "region"
+    },
     "baseball": {
       "package": "sports-assets",
       "file": "sport-icons/baseball.svg",
@@ -37,6 +55,33 @@
       "source": "polymarket",
       "license": "reference-only",
       "label": "농구",
+      "labelOrigin": "region"
+    },
+    "beach-soccer": {
+      "package": "sports-assets",
+      "file": "sport-icons/beach-soccer.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "비치사커",
+      "labelOrigin": "region"
+    },
+    "beach-volleyball": {
+      "package": "sports-assets",
+      "file": "sport-icons/beach-volleyball.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "비치발리볼",
+      "labelOrigin": "region"
+    },
+    "boxing": {
+      "package": "sports-assets",
+      "file": "sport-icons/boxing.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "복싱",
       "labelOrigin": "region"
     },
     "cfb": {
@@ -93,6 +138,15 @@
       "label": "e스포츠",
       "labelOrigin": "region"
     },
+    "floorball": {
+      "package": "sports-assets",
+      "file": "sport-icons/floorball.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "플로어볼",
+      "labelOrigin": "region"
+    },
     "football": {
       "package": "sports-assets",
       "file": "sport-icons/football.svg",
@@ -101,6 +155,15 @@
       "license": "reference-only",
       "label": "Football",
       "labelOrigin": "global"
+    },
+    "futsal": {
+      "package": "sports-assets",
+      "file": "sport-icons/futsal.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "풋살",
+      "labelOrigin": "region"
     },
     "golf": {
       "package": "sports-assets",
@@ -183,6 +246,15 @@
       "label": "NFL",
       "labelOrigin": "global"
     },
+    "pesapallo": {
+      "package": "sports-assets",
+      "file": "sport-icons/pesapallo.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "페사팔로",
+      "labelOrigin": "region"
+    },
     "pickleball": {
       "package": "sports-assets",
       "file": "sport-icons/pickleball.svg",
@@ -199,6 +271,15 @@
       "source": "polymarket",
       "license": "reference-only",
       "label": "럭비",
+      "labelOrigin": "region"
+    },
+    "snooker": {
+      "package": "sports-assets",
+      "file": "sport-icons/snooker.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "스누커",
       "labelOrigin": "region"
     },
     "soccer": {
@@ -262,6 +343,15 @@
       "source": "in-house",
       "license": "MIT",
       "label": "배구",
+      "labelOrigin": "region"
+    },
+    "water-polo": {
+      "package": "sports-assets",
+      "file": "sport-icons/water-polo.svg",
+      "fileOrigin": "global",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "label": "수구",
       "labelOrigin": "region"
     }
   },
@@ -455,6 +545,186 @@
       "source": "naver-sports",
       "license": "reference-only",
       "label": "SSG",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/arsenal": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/arsenal.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "아스널",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/aston-villa": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/aston-villa.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "애스턴 빌라",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/bournemouth": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/bournemouth.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "본머스",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/brentford": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/brentford.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "브렌트퍼드",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/brighton-and-hove-albion": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/brighton-and-hove-albion.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "브라이턴",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/chelsea": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/chelsea.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "첼시",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/coventry-city": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/coventry-city.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "코벤트리",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/crystal-palace": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/crystal-palace.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "크리스털",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/everton": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/everton.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "에버턴",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/fulham": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/fulham.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "풀럼",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/hull-city": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/hull-city.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "헐 시티",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/ipswich-town": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/ipswich-town.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "입스위치",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/leeds-united": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/leeds-united.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "리즈",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/liverpool": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/liverpool.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "리버풀",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/manchester-city": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/manchester-city.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "맨시티",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/manchester-united": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/manchester-united.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "맨유",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/newcastle-united": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/newcastle-united.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "뉴캐슬",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/nottingham-forest": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/nottingham-forest.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "노팅엄",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/sunderland": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/sunderland.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "선덜랜드",
+      "labelOrigin": "region"
+    },
+    "soccer/epl/tottenham-hotspur": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/tottenham-hotspur.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "토트넘",
       "labelOrigin": "region"
     },
     "soccer/k-league-1/bucheon-fc-1995": {

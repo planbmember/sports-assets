@@ -1,5 +1,5 @@
 {
-  "version": "0.8.1",
+  "version": "0.9.0",
   "licenseNote": "Logos, emblems and icons are trademarks of their respective owners (sources: in-house, naver-sports, oddsportal, polymarket, sportsnavi, thesportsdb); display-only reference, redistribution rights unclear. Per-file provenance: archive/<source>/index.json.",
   "sportIcons": {
     "american-football": {
@@ -22,6 +22,26 @@
       ],
       "label": "Aussie Rules"
     },
+    "badminton": {
+      "package": "sports-assets",
+      "file": "sport-icons/badminton.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        7
+      ],
+      "label": "Badminton"
+    },
+    "bandy": {
+      "package": "sports-assets",
+      "file": "sport-icons/bandy.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        8
+      ],
+      "label": "Bandy"
+    },
     "baseball": {
       "package": "sports-assets",
       "file": "sport-icons/baseball.svg",
@@ -41,6 +61,36 @@
         2
       ],
       "label": "Basketball"
+    },
+    "beach-soccer": {
+      "package": "sports-assets",
+      "file": "sport-icons/beach-soccer.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        9
+      ],
+      "label": "Beach Soccer"
+    },
+    "beach-volleyball": {
+      "package": "sports-assets",
+      "file": "sport-icons/beach-volleyball.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        10
+      ],
+      "label": "Beach Volleyball"
+    },
+    "boxing": {
+      "package": "sports-assets",
+      "file": "sport-icons/boxing.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        11
+      ],
+      "label": "Boxing"
     },
     "cfb": {
       "file": "sport-icons/cfb.webp",
@@ -99,12 +149,32 @@
       ],
       "label": "Esports"
     },
+    "floorball": {
+      "package": "sports-assets",
+      "file": "sport-icons/floorball.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        17
+      ],
+      "label": "Floorball"
+    },
     "football": {
       "file": "sport-icons/football.svg",
       "label": "Football",
       "source": "polymarket",
       "license": "reference-only",
       "package": "sports-assets"
+    },
+    "futsal": {
+      "package": "sports-assets",
+      "file": "sport-icons/futsal.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        18
+      ],
+      "label": "Futsal"
     },
     "golf": {
       "package": "sports-assets",
@@ -184,6 +254,16 @@
       "license": "reference-only",
       "package": "sports-assets"
     },
+    "pesapallo": {
+      "package": "sports-assets",
+      "file": "sport-icons/pesapallo.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        24
+      ],
+      "label": "Pesäpallo"
+    },
     "pickleball": {
       "package": "sports-assets",
       "file": "sport-icons/pickleball.svg",
@@ -203,6 +283,16 @@
         26
       ],
       "label": "Rugby"
+    },
+    "snooker": {
+      "package": "sports-assets",
+      "file": "sport-icons/snooker.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        27
+      ],
+      "label": "Snooker"
     },
     "soccer": {
       "package": "sports-assets",
@@ -264,6 +354,16 @@
         4
       ],
       "label": "Volleyball"
+    },
+    "water-polo": {
+      "package": "sports-assets",
+      "file": "sport-icons/water-polo.svg",
+      "source": "oddsportal",
+      "license": "reference-only",
+      "richlabelIds": [
+        30
+      ],
+      "label": "Water Polo"
     }
   },
   "leagueLogos": {
@@ -528,6 +628,206 @@
         "source": "thesportsdb",
         "license": "reference-only"
       }
+    },
+    "soccer/epl/arsenal": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/arsenal.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        125
+      ],
+      "label": "Arsenal"
+    },
+    "soccer/epl/aston-villa": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/aston-villa.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        157
+      ],
+      "label": "Aston Villa"
+    },
+    "soccer/epl/bournemouth": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/bournemouth.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        164
+      ],
+      "label": "Bournemouth"
+    },
+    "soccer/epl/brentford": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/brentford.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        158
+      ],
+      "label": "Brentford"
+    },
+    "soccer/epl/brighton-and-hove-albion": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/brighton-and-hove-albion.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        174
+      ],
+      "label": "Brighton and Hove Albion"
+    },
+    "soccer/epl/chelsea": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/chelsea.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        163
+      ],
+      "label": "Chelsea"
+    },
+    "soccer/epl/coventry-city": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/coventry-city.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        310
+      ],
+      "label": "Coventry City"
+    },
+    "soccer/epl/crystal-palace": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/crystal-palace.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        255
+      ],
+      "label": "Crystal Palace"
+    },
+    "soccer/epl/everton": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/everton.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        260
+      ],
+      "label": "Everton"
+    },
+    "soccer/epl/fulham": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/fulham.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        152
+      ],
+      "label": "Fulham"
+    },
+    "soccer/epl/hull-city": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/hull-city.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        259
+      ],
+      "label": "Hull City"
+    },
+    "soccer/epl/ipswich-town": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/ipswich-town.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        151
+      ],
+      "label": "Ipswich Town"
+    },
+    "soccer/epl/leeds-united": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/leeds-united.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        126
+      ],
+      "label": "Leeds United"
+    },
+    "soccer/epl/liverpool": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/liverpool.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        275
+      ],
+      "label": "Liverpool"
+    },
+    "soccer/epl/manchester-city": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/manchester-city.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        276
+      ],
+      "label": "Manchester City"
+    },
+    "soccer/epl/manchester-united": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/manchester-united.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        193
+      ],
+      "label": "Manchester United"
+    },
+    "soccer/epl/newcastle-united": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/newcastle-united.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        311
+      ],
+      "label": "Newcastle United"
+    },
+    "soccer/epl/nottingham-forest": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/nottingham-forest.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        256
+      ],
+      "label": "Nottingham Forest"
+    },
+    "soccer/epl/sunderland": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/sunderland.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        173
+      ],
+      "label": "Sunderland"
+    },
+    "soccer/epl/tottenham-hotspur": {
+      "package": "sports-assets",
+      "file": "team-logos/soccer/epl/tottenham-hotspur.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelTeamIds": [
+        194
+      ],
+      "label": "Tottenham Hotspur"
     },
     "soccer/k-league-1/bucheon-fc-1995": {
       "package": "sports-assets",
@@ -962,6 +1262,7 @@
   },
   "athleteImages": {},
   "archives": {
+    "in-house": "archive/in-house/index.json",
     "naver-sports": "archive/naver-sports/index.json",
     "oddsportal": "archive/oddsportal/index.json",
     "polymarket": "archive/polymarket/index.json",
@@ -969,6 +1270,9 @@
     "thesportsdb": "archive/thesportsdb/index.json"
   },
   "archivePackages": {
+    "in-house": [
+      "sports-assets-archive-in-house"
+    ],
     "naver-sports": [
       "sports-assets-archive-naver-sports"
     ],

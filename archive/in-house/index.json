@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source": "in-house",
+  "entries": [
+    {
+      "sourceId": "4",
+      "kind": "sport-icon",
+      "file": "archive/in-house/sport-icons/4.9db3d35c.svg",
+      "originalUrl": "/cms/api/media/file/volleyball.svg",
+      "sha256": "9db3d35c5708c6f60a8bb041af1b8e0ec99ec771d6fc27f461cf71e573359840",
+      "fetchedAt": "2026-10-17T07:09:35.706Z",
+      "sourceLeagueId": null,
+      "label": null,
+      "labelLocale": null
+    }
+  ]
+}

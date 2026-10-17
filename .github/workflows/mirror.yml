@@ -1,0 +1,50 @@
+name: mirror
+
+on:
+  push:
+    branches: [main]
+    tags: ["*"]
+  workflow_dispatch:
+
+# Mirrors main, every tag and all Git LFS objects to the GitLab backup
+# (git@gitlab.com:satoshization/sports-assets.git). The GitLab project holds
+# the public half of GITLAB_MIRROR_SSH_KEY as a deploy key with write access.
+# LFS objects are cached between runs, so a run downloads only new objects.
+concurrency:
+  group: mirror
+  cancel-in-progress: false
+
+jobs:
+  gitlab:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: false
+      - uses: actions/cache@v4
+        with:
+          path: .git/lfs/objects
+          key: lfs-${{ github.sha }}
+          restore-keys: lfs-
+      - name: fetch LFS objects
+        run: git lfs fetch --all origin
+      - name: push to GitLab
+        env:
+          SSH_KEY: ${{ secrets.GITLAB_MIRROR_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/gitlab_mirror
+          chmod 600 ~/.ssh/gitlab_mirror
+          cat >> ~/.ssh/known_hosts <<'EOF'
+          gitlab.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAfuCHKVTjquxvt6CM6tdG4SLp1Btn/nOeHHE5UOzRdf
+          gitlab.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFSMqzJeV9rUzU4kWitGjeR4PWSa29SPqJ1fVkhtj3Hw9xjLVXVYrU9QlYWrOLXBpQ6KWjbjTDTdDkoohFzgbEY=
+          gitlab.com ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsj2bNKTBSpIYDEGk9KxsGh3mySTRgMtXL583qmBpzeQ+jqCMRgBqB98u3z++J1sKlXHWfM9dyhSevkMwSbhoR8XIq/U0tCNyokEi/ueaBMCvbcTHhO7FcwzY92WK4Yt0aGROY5qX2UKSeOvuP4D6TPqKF1onrSzH9bx9XUf2lEdWT/ia1NEKjunUqu1xOB/StKDHMoX4/OKyIzuS0q/T1zOATthvasJFoPrAjkohTyaDUz2LN5JoH839hViyEG82yB+MjcFV5MU3N1l1QL3cVUCh93xSaua1N85qivl+siMkPGbO5xR/En4iEY6K2XPASUEMaieWVNTRCtJ4S8H+9
+          EOF
+          export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/gitlab_mirror -o IdentitiesOnly=yes"
+          git remote add gitlab git@gitlab.com:satoshization/sports-assets.git
+          # LFS objects first, so no pushed ref points at a missing object.
+          git lfs push --all gitlab
+          git push --force gitlab refs/remotes/origin/main:refs/heads/main 'refs/tags/*:refs/tags/*'

@@ -1,5 +1,5 @@
 {
-  "version": "0.8.0",
+  "version": "0.8.1",
   "region": "kr",
   "locale": "ko",
   "sportIcons": {
@@ -259,7 +259,7 @@
       "package": "sports-assets",
       "file": "sport-icons/volleyball.svg",
       "fileOrigin": "global",
-      "source": "polymarket",
+      "source": "in-house",
       "license": "MIT",
       "label": "배구",
       "labelOrigin": "region"

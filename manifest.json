@@ -1,6 +1,6 @@
 {
-  "version": "0.8.0",
-  "licenseNote": "Logos, emblems and icons are trademarks of their respective owners (sources: naver-sports, oddsportal, polymarket, sportsnavi, thesportsdb); display-only reference, redistribution rights unclear. Per-file provenance: archive/<source>/index.json.",
+  "version": "0.8.1",
+  "licenseNote": "Logos, emblems and icons are trademarks of their respective owners (sources: in-house, naver-sports, oddsportal, polymarket, sportsnavi, thesportsdb); display-only reference, redistribution rights unclear. Per-file provenance: archive/<source>/index.json.",
   "sportIcons": {
     "american-football": {
       "package": "sports-assets",
@@ -258,7 +258,7 @@
     "volleyball": {
       "package": "sports-assets",
       "file": "sport-icons/volleyball.svg",
-      "source": "polymarket",
+      "source": "in-house",
       "license": "MIT",
       "richlabelIds": [
         4

@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "licenseNote": "Logos, emblems and icons are trademarks of their respective owners (sources: naver-sports, oddsportal, polymarket, sportsnavi, thesportsdb); display-only reference, redistribution rights unclear. Per-file provenance: archive/<source>/index.json.",
   "sportIcons": {
     "american-football": {
@@ -254,9 +254,130 @@
       "source": "polymarket",
       "license": "reference-only",
       "package": "sports-assets"
+    },
+    "volleyball": {
+      "package": "sports-assets",
+      "file": "sport-icons/volleyball.svg",
+      "source": "polymarket",
+      "license": "MIT",
+      "richlabelIds": [
+        4
+      ],
+      "label": "Volleyball"
     }
   },
-  "leagueLogos": {},
+  "leagueLogos": {
+    "baseball/kbo": {
+      "package": "sports-assets",
+      "file": "league-logos/baseball/kbo.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        4
+      ],
+      "label": "Korean KBO League"
+    },
+    "baseball/mlb": {
+      "package": "sports-assets",
+      "file": "league-logos/baseball/mlb.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        1
+      ],
+      "label": "MLB"
+    },
+    "basketball/nba": {
+      "package": "sports-assets",
+      "file": "league-logos/basketball/nba.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        26
+      ],
+      "label": "NBA"
+    },
+    "soccer/bundesliga": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/bundesliga.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        12
+      ],
+      "label": "German Bundesliga"
+    },
+    "soccer/epl": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/epl.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        16
+      ],
+      "label": "English Premier League"
+    },
+    "soccer/eredivisie": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/eredivisie.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        11
+      ],
+      "label": "Dutch Eredivisie"
+    },
+    "soccer/k-league-1": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/k-league-1.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        5
+      ],
+      "label": "South Korean K League 1"
+    },
+    "soccer/k-league-2": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/k-league-2.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        7
+      ],
+      "label": "South Korean K League 2"
+    },
+    "soccer/laliga": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/laliga.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        14
+      ],
+      "label": "Spanish La Liga"
+    },
+    "soccer/ligue1": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/ligue1.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        13
+      ],
+      "label": "French Ligue 1"
+    },
+    "soccer/seriea": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/seriea.webp",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "richlabelIds": [
+        17
+      ],
+      "label": "Italian Serie A"
+    }
+  },
   "teamLogos": {
     "baseball/kbo/doosan-bears": {
       "package": "sports-assets",
@@ -264,8 +385,9 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        59
+        649
       ],
+      "label": "Doosan Bears",
       "alternate": {
         "file": "team-logos/baseball/kbo/doosan-bears.sportsdb.webp",
         "source": "thesportsdb",
@@ -278,8 +400,9 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        42
+        633
       ],
+      "label": "Hanwha Eagles",
       "alternate": {
         "file": "team-logos/baseball/kbo/hanwha-eagles.sportsdb.webp",
         "source": "thesportsdb",
@@ -352,8 +475,9 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        58
+        580
       ],
+      "label": "Lotte Giants",
       "alternate": {
         "file": "team-logos/baseball/kbo/lotte-giants.sportsdb.webp",
         "source": "thesportsdb",
@@ -381,8 +505,9 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        63
+        583
       ],
+      "label": "Samsung Lions",
       "alternate": {
         "file": "team-logos/baseball/kbo/samsung-lions.sportsdb.webp",
         "source": "thesportsdb",
@@ -410,7 +535,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        78,
         587
       ],
       "label": "Bucheon FC 1995",
@@ -426,7 +550,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        73,
         576
       ],
       "label": "Daejeon Hana Citizen",
@@ -442,7 +565,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        118,
         628
       ],
       "label": "FC Anyang",
@@ -474,7 +596,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        61,
         586
       ],
       "label": "Gangwon FC",
@@ -490,7 +611,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        117,
         627
       ],
       "label": "Gimcheon Sangmu",
@@ -506,7 +626,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        219,
         532
       ],
       "label": "Gwangju FC",
@@ -522,7 +641,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        62,
         588
       ],
       "label": "Incheon United",
@@ -538,7 +656,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        108,
         617
       ],
       "label": "Jeju SK",
@@ -554,7 +671,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        74,
         577
       ],
       "label": "Jeonbuk Hyundai Motors",
@@ -570,7 +686,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        77,
         589
       ],
       "label": "Pohang Steelers",
@@ -586,7 +701,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        220,
         533
       ],
       "label": "Ulsan HD",
@@ -602,7 +716,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        218,
         535
       ],
       "label": "Ansan Greeners",
@@ -618,7 +731,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        110,
         621
       ],
       "label": "Busan IPark",
@@ -634,7 +746,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        119,
         629
       ],
       "label": "Cheonan City",
@@ -650,7 +761,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        81,
         590
       ],
       "label": "Chungbuk Cheongju",
@@ -666,7 +776,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        122,
         632
       ],
       "label": "Chungnam Asan",
@@ -697,7 +806,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        121,
         631
       ],
       "label": "Gimhae FC",
@@ -713,7 +821,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        79,
         592
       ],
       "label": "Gimpo FC",
@@ -729,7 +836,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        120,
         630
       ],
       "label": "Gyeongnam FC",
@@ -745,7 +851,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        76,
         578
       ],
       "label": "Hwaseong FC",
@@ -761,7 +866,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        105,
         618
       ],
       "label": "Jeonnam Dragons",
@@ -777,7 +881,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        109,
         620
       ],
       "label": "Paju Frontier",
@@ -793,7 +896,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        82,
         591
       ],
       "label": "Seongnam FC",
@@ -809,7 +911,6 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        80,
         593
       ],
       "label": "Seoul E-Land",
@@ -825,8 +926,9 @@
       "source": "naver-sports",
       "license": "reference-only",
       "richlabelTeamIds": [
-        75
+        217
       ],
+      "label": "Suwon FC",
       "alternate": {
         "file": "team-logos/soccer/k-league-2/suwon-fc.sportsdb.webp",
         "source": "thesportsdb",

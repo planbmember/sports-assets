@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "region": "kr",
   "locale": "ko",
   "sportIcons": {
@@ -9,8 +9,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "American Football",
-      "labelOrigin": "global"
+      "label": "미식축구",
+      "labelOrigin": "region"
     },
     "aussie-rules": {
       "package": "sports-assets",
@@ -18,8 +18,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Aussie Rules",
-      "labelOrigin": "global"
+      "label": "호주식 축구",
+      "labelOrigin": "region"
     },
     "baseball": {
       "package": "sports-assets",
@@ -27,8 +27,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Baseball",
-      "labelOrigin": "global"
+      "label": "야구",
+      "labelOrigin": "region"
     },
     "basketball": {
       "package": "sports-assets",
@@ -36,8 +36,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Basketball",
-      "labelOrigin": "global"
+      "label": "농구",
+      "labelOrigin": "region"
     },
     "cfb": {
       "package": "sports-assets",
@@ -54,8 +54,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Chess",
-      "labelOrigin": "global"
+      "label": "체스",
+      "labelOrigin": "region"
     },
     "cricket": {
       "package": "sports-assets",
@@ -63,8 +63,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Cricket",
-      "labelOrigin": "global"
+      "label": "크리켓",
+      "labelOrigin": "region"
     },
     "cycling": {
       "package": "sports-assets",
@@ -72,8 +72,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Cycling",
-      "labelOrigin": "global"
+      "label": "사이클",
+      "labelOrigin": "region"
     },
     "darts": {
       "package": "sports-assets",
@@ -81,8 +81,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Darts",
-      "labelOrigin": "global"
+      "label": "다트",
+      "labelOrigin": "region"
     },
     "esports": {
       "package": "sports-assets",
@@ -90,8 +90,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Esports",
-      "labelOrigin": "global"
+      "label": "e스포츠",
+      "labelOrigin": "region"
     },
     "football": {
       "package": "sports-assets",
@@ -108,8 +108,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Golf",
-      "labelOrigin": "global"
+      "label": "골프",
+      "labelOrigin": "region"
     },
     "handball": {
       "package": "sports-assets",
@@ -117,8 +117,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Handball",
-      "labelOrigin": "global"
+      "label": "핸드볼",
+      "labelOrigin": "region"
     },
     "hockey": {
       "package": "sports-assets",
@@ -135,8 +135,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Ice Hockey",
-      "labelOrigin": "global"
+      "label": "아이스하키",
+      "labelOrigin": "region"
     },
     "mlb": {
       "package": "sports-assets",
@@ -153,8 +153,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "MMA",
-      "labelOrigin": "global"
+      "label": "종합격투기",
+      "labelOrigin": "region"
     },
     "motorsport": {
       "package": "sports-assets",
@@ -162,8 +162,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Motorsport",
-      "labelOrigin": "global"
+      "label": "모터스포츠",
+      "labelOrigin": "region"
     },
     "motorsports": {
       "package": "sports-assets",
@@ -189,8 +189,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Pickleball",
-      "labelOrigin": "global"
+      "label": "피클볼",
+      "labelOrigin": "region"
     },
     "rugby": {
       "package": "sports-assets",
@@ -198,8 +198,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Rugby",
-      "labelOrigin": "global"
+      "label": "럭비",
+      "labelOrigin": "region"
     },
     "soccer": {
       "package": "sports-assets",
@@ -207,8 +207,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Soccer",
-      "labelOrigin": "global"
+      "label": "축구",
+      "labelOrigin": "region"
     },
     "table-tennis": {
       "package": "sports-assets",
@@ -216,8 +216,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Table Tennis",
-      "labelOrigin": "global"
+      "label": "탁구",
+      "labelOrigin": "region"
     },
     "tennis": {
       "package": "sports-assets",
@@ -225,8 +225,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Tennis",
-      "labelOrigin": "global"
+      "label": "테니스",
+      "labelOrigin": "region"
     },
     "ucl": {
       "package": "sports-assets",
@@ -254,9 +254,118 @@
       "license": "reference-only",
       "label": "UNL",
       "labelOrigin": "global"
+    },
+    "volleyball": {
+      "package": "sports-assets",
+      "file": "sport-icons/volleyball.svg",
+      "fileOrigin": "global",
+      "source": "polymarket",
+      "license": "MIT",
+      "label": "배구",
+      "labelOrigin": "region"
     }
   },
-  "leagueLogos": {},
+  "leagueLogos": {
+    "baseball/kbo": {
+      "package": "sports-assets",
+      "file": "league-logos/baseball/kbo.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "KBO 리그",
+      "labelOrigin": "region"
+    },
+    "baseball/mlb": {
+      "package": "sports-assets",
+      "file": "league-logos/baseball/mlb.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "메이저리그",
+      "labelOrigin": "region"
+    },
+    "basketball/nba": {
+      "package": "sports-assets",
+      "file": "league-logos/basketball/nba.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "NBA",
+      "labelOrigin": "region"
+    },
+    "soccer/bundesliga": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/bundesliga.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "독일 분데스리가",
+      "labelOrigin": "region"
+    },
+    "soccer/epl": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/epl.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "잉글랜드 프리미어리그",
+      "labelOrigin": "region"
+    },
+    "soccer/eredivisie": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/eredivisie.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "네덜란드 에레디비시",
+      "labelOrigin": "region"
+    },
+    "soccer/k-league-1": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/k-league-1.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "K리그1",
+      "labelOrigin": "region"
+    },
+    "soccer/k-league-2": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/k-league-2.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "K리그2",
+      "labelOrigin": "region"
+    },
+    "soccer/laliga": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/laliga.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "스페인 라리가",
+      "labelOrigin": "region"
+    },
+    "soccer/ligue1": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/ligue1.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "프랑스 리그1",
+      "labelOrigin": "region"
+    },
+    "soccer/seriea": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/seriea.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "이탈리아 세리에A",
+      "labelOrigin": "region"
+    }
+  },
   "teamLogos": {
     "baseball/kbo/doosan-bears": {
       "package": "sports-assets",

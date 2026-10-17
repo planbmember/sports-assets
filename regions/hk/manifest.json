@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "region": "hk",
   "locale": "zh-Hant",
   "sportIcons": {
@@ -9,8 +9,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "American Football",
-      "labelOrigin": "global"
+      "label": "美式足球",
+      "labelOrigin": "region"
     },
     "aussie-rules": {
       "package": "sports-assets",
@@ -18,8 +18,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Aussie Rules",
-      "labelOrigin": "global"
+      "label": "澳式足球",
+      "labelOrigin": "region"
     },
     "baseball": {
       "package": "sports-assets",
@@ -27,8 +27,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Baseball",
-      "labelOrigin": "global"
+      "label": "棒球",
+      "labelOrigin": "region"
     },
     "basketball": {
       "package": "sports-assets",
@@ -36,8 +36,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Basketball",
-      "labelOrigin": "global"
+      "label": "籃球",
+      "labelOrigin": "region"
     },
     "cfb": {
       "package": "sports-assets",
@@ -54,8 +54,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Chess",
-      "labelOrigin": "global"
+      "label": "國際象棋",
+      "labelOrigin": "region"
     },
     "cricket": {
       "package": "sports-assets",
@@ -63,8 +63,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Cricket",
-      "labelOrigin": "global"
+      "label": "板球",
+      "labelOrigin": "region"
     },
     "cycling": {
       "package": "sports-assets",
@@ -72,8 +72,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Cycling",
-      "labelOrigin": "global"
+      "label": "單車",
+      "labelOrigin": "region"
     },
     "darts": {
       "package": "sports-assets",
@@ -81,8 +81,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Darts",
-      "labelOrigin": "global"
+      "label": "飛鏢",
+      "labelOrigin": "region"
     },
     "esports": {
       "package": "sports-assets",
@@ -90,8 +90,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Esports",
-      "labelOrigin": "global"
+      "label": "電子競技",
+      "labelOrigin": "region"
     },
     "football": {
       "package": "sports-assets",
@@ -108,8 +108,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Golf",
-      "labelOrigin": "global"
+      "label": "高爾夫球",
+      "labelOrigin": "region"
     },
     "handball": {
       "package": "sports-assets",
@@ -117,8 +117,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Handball",
-      "labelOrigin": "global"
+      "label": "手球",
+      "labelOrigin": "region"
     },
     "hockey": {
       "package": "sports-assets",
@@ -135,8 +135,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Ice Hockey",
-      "labelOrigin": "global"
+      "label": "冰球",
+      "labelOrigin": "region"
     },
     "mlb": {
       "package": "sports-assets",
@@ -153,8 +153,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "MMA",
-      "labelOrigin": "global"
+      "label": "綜合格鬥",
+      "labelOrigin": "region"
     },
     "motorsport": {
       "package": "sports-assets",
@@ -162,8 +162,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Motorsport",
-      "labelOrigin": "global"
+      "label": "賽車",
+      "labelOrigin": "region"
     },
     "motorsports": {
       "package": "sports-assets",
@@ -189,8 +189,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Pickleball",
-      "labelOrigin": "global"
+      "label": "匹克球",
+      "labelOrigin": "region"
     },
     "rugby": {
       "package": "sports-assets",
@@ -198,8 +198,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Rugby",
-      "labelOrigin": "global"
+      "label": "橄欖球",
+      "labelOrigin": "region"
     },
     "soccer": {
       "package": "sports-assets",
@@ -207,8 +207,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Soccer",
-      "labelOrigin": "global"
+      "label": "足球",
+      "labelOrigin": "region"
     },
     "table-tennis": {
       "package": "sports-assets",
@@ -216,8 +216,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Table Tennis",
-      "labelOrigin": "global"
+      "label": "乒乓球",
+      "labelOrigin": "region"
     },
     "tennis": {
       "package": "sports-assets",
@@ -225,8 +225,8 @@
       "fileOrigin": "global",
       "source": "polymarket",
       "license": "reference-only",
-      "label": "Tennis",
-      "labelOrigin": "global"
+      "label": "網球",
+      "labelOrigin": "region"
     },
     "ucl": {
       "package": "sports-assets",
@@ -254,23 +254,136 @@
       "license": "reference-only",
       "label": "UNL",
       "labelOrigin": "global"
+    },
+    "volleyball": {
+      "package": "sports-assets",
+      "file": "sport-icons/volleyball.svg",
+      "fileOrigin": "global",
+      "source": "polymarket",
+      "license": "MIT",
+      "label": "排球",
+      "labelOrigin": "region"
     }
   },
-  "leagueLogos": {},
+  "leagueLogos": {
+    "baseball/kbo": {
+      "package": "sports-assets",
+      "file": "league-logos/baseball/kbo.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "Korean KBO League",
+      "labelOrigin": "global"
+    },
+    "baseball/mlb": {
+      "package": "sports-assets",
+      "file": "league-logos/baseball/mlb.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "MLB",
+      "labelOrigin": "global"
+    },
+    "basketball/nba": {
+      "package": "sports-assets",
+      "file": "league-logos/basketball/nba.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "NBA",
+      "labelOrigin": "global"
+    },
+    "soccer/bundesliga": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/bundesliga.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "German Bundesliga",
+      "labelOrigin": "global"
+    },
+    "soccer/epl": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/epl.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "English Premier League",
+      "labelOrigin": "global"
+    },
+    "soccer/eredivisie": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/eredivisie.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "Dutch Eredivisie",
+      "labelOrigin": "global"
+    },
+    "soccer/k-league-1": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/k-league-1.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "South Korean K League 1",
+      "labelOrigin": "global"
+    },
+    "soccer/k-league-2": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/k-league-2.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "South Korean K League 2",
+      "labelOrigin": "global"
+    },
+    "soccer/laliga": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/laliga.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "Spanish La Liga",
+      "labelOrigin": "global"
+    },
+    "soccer/ligue1": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/ligue1.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "French Ligue 1",
+      "labelOrigin": "global"
+    },
+    "soccer/seriea": {
+      "package": "sports-assets",
+      "file": "league-logos/soccer/seriea.webp",
+      "fileOrigin": "global",
+      "source": "thesportsdb",
+      "license": "reference-only",
+      "label": "Italian Serie A",
+      "labelOrigin": "global"
+    }
+  },
   "teamLogos": {
     "baseball/kbo/doosan-bears": {
       "package": "sports-assets",
       "file": "team-logos/baseball/kbo/doosan-bears.webp",
       "fileOrigin": "global",
       "source": "naver-sports",
-      "license": "reference-only"
+      "license": "reference-only",
+      "label": "Doosan Bears",
+      "labelOrigin": "global"
     },
     "baseball/kbo/hanwha-eagles": {
       "package": "sports-assets",
       "file": "team-logos/baseball/kbo/hanwha-eagles.webp",
       "fileOrigin": "global",
       "source": "naver-sports",
-      "license": "reference-only"
+      "license": "reference-only",
+      "label": "Hanwha Eagles",
+      "labelOrigin": "global"
     },
     "baseball/kbo/kia-tigers": {
       "package": "sports-assets",
@@ -313,7 +426,9 @@
       "file": "team-logos/baseball/kbo/lotte-giants.webp",
       "fileOrigin": "global",
       "source": "naver-sports",
-      "license": "reference-only"
+      "license": "reference-only",
+      "label": "Lotte Giants",
+      "labelOrigin": "global"
     },
     "baseball/kbo/nc-dinos": {
       "package": "sports-assets",
@@ -329,7 +444,9 @@
       "file": "team-logos/baseball/kbo/samsung-lions.webp",
       "fileOrigin": "global",
       "source": "naver-sports",
-      "license": "reference-only"
+      "license": "reference-only",
+      "label": "Samsung Lions",
+      "labelOrigin": "global"
     },
     "baseball/kbo/ssg-landers": {
       "package": "sports-assets",
@@ -579,7 +696,9 @@
       "file": "team-logos/soccer/k-league-2/suwon-fc.webp",
       "fileOrigin": "global",
       "source": "naver-sports",
-      "license": "reference-only"
+      "license": "reference-only",
+      "label": "Suwon FC",
+      "labelOrigin": "global"
     },
     "soccer/k-league-2/suwon-samsung-bluewings": {
       "package": "sports-assets",
